@@ -5,8 +5,11 @@
 !*.xcworkspace/xcshareddata/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# cocoa pod
-Pods/*
+# CocoaPods
+/Pods
+
+# Carthage
+/Carthage
 
 # others
 .DS_Store
