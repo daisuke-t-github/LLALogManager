@@ -22,9 +22,10 @@ and
 `github "daisuke-t-github/LLALogManager"` 
 
 
-## Sample
+## Example
 
-```swift code
+### Swift code
+```
 // Log Level.
 print("LEVEL")
 LLALogManager.sharedInstance.d("DEVELOP")	// Output when if setting DEBUG switch
@@ -68,8 +69,8 @@ LLALogManager.sharedInstance.dateFormat = LLALogManager.defaultDateFormat
 LLALogManager.sharedInstance.d("Back to Default date format.")
 ```
 
-
-``` output
+### Output
+```
 LEVEL
 [2019-01-01 00:01:37.008][ViewController.swift][viewDidLoad():24][DEV]DEVELOP
 [2019-01-01 00:01:37.011][ViewController.swift][viewDidLoad():25][INF]INFORMATION
