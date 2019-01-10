@@ -34,7 +34,7 @@ and
 ```swift
 // Log Level.
 print("LEVEL")
-LLALogManager.sharedInstance.d("DEVELOP")	// Output when if setting DEBUG switch
+LLALogManager.sharedInstance.d("DEVELOP")	// Output when if setting DEBUG switch.
 LLALogManager.sharedInstance.i("INFORMATION")
 LLALogManager.sharedInstance.w("WARNING")
 LLALogManager.sharedInstance.e("ERROR")
