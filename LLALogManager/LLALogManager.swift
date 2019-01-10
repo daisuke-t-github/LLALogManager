@@ -10,27 +10,36 @@ import Foundation
 
 
 
-class LLALogManager
+public class LLALogManager
 {
 
 	// MARK: singleton
-	static let sharedInstance = LLALogManager()
+	public static let sharedInstance = LLALogManager()
 	
 
 	// MARK: enum, const.
-	private enum LEVEL : UInt
+	private enum Level : UInt
 	{
-		case DEV
-		case INF
-		case WAR
-		case ERR
+		case develop
+		case information
+		case warning
+		case error
 	}
-	
-	static let SEPARATOR_DEFAULT: String = " "
-	
+
+	public static let defaultSeparator: String = " "
+	public static let defaultDateFormat: String = "yyyy-MM-dd HH:mm:ss.SSS"
+
+	private static let levelMap:[Level:String] = [
+		Level.develop : "DEV",
+		Level.information : "INF",
+		Level.warning : "WAR",
+		Level.error : "ERR",
+		]
+
 	
 	// MARK: member
-	var separator:String = LLALogManager.SEPARATOR_DEFAULT
+	public var separator:String = LLALogManager.defaultSeparator
+	public var dateFormat:String = LLALogManager.defaultDateFormat
 	
 	
 	// MARK: life-cycle
@@ -41,45 +50,36 @@ class LLALogManager
 	
 
 	// MARK: method
-	func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
 		#if DEBUG
-		log(LEVEL.DEV, items: items, file: file, function: function, line: line)
+		log(Level.develop, items: items, file: file, function: function, line: line)
 		#endif
 	}
 	
-	func i(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
-		log(LEVEL.INF, items: items, file: file, function: function, line: line)
+	public func i(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+		log(Level.information, items: items, file: file, function: function, line: line)
 	}
 
-	func w(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
-		log(LEVEL.WAR, items: items, file: file, function: function, line: line)
+	public func w(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+		log(Level.warning, items: items, file: file, function: function, line: line)
 	}
 
-	func e(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
-		log(LEVEL.ERR, items: items, file: file, function: function, line: line)
+	public func e(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+		log(Level.error, items: items, file: file, function: function, line: line)
 	}
 	
-	private func log(_ level: LEVEL, items:[Any], file: String, function: String, line: Int) -> Void {
-		
-		let map:[LEVEL:String] = [
-			LEVEL.DEV : "DEV",
-			LEVEL.INF : "INF",
-			LEVEL.WAR : "WAR",
-			LEVEL.ERR : "ERR",
-			]
-
-		let levelStr = map[level]!
-
+	private func log(_ level: Level, items:[Any], file: String, function: String, line: Int) -> Void {
 		
 		/**
 		 * print prefix.
 		 */
+		let levelStr = LLALogManager.levelMap[level]!
 		let fileName: String = NSString(string:file).lastPathComponent
 		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+		dateFormatter.dateFormat = self.dateFormat
 		let date = dateFormatter.string(from: Date())
-		
-		print("\(date) \(levelStr) \(fileName) \(function):\(line) ",
+
+		print("[\(date)][\(fileName)][\(function):\(line)][\(levelStr)]",
 			terminator: "")
 
 		

@@ -1,48 +1,93 @@
 # LLALogManager
-LLALogManager is iOS LogManager by Swift.
+**LLALogManager** is iOS LogManager by Swift.
+
 
 ## Feature
 Compared with **print()**,   
 LLALogManager can output additional information.
 
 * Date
-* Log level
 * File name
 * Function name
 * Line no in File
-
-Other features.
+* Log level
+  
+and  
 - Custumize output separator
+- Custumize date format
+
+
+## Installation
+### Carthage
+`github "daisuke-t-github/LLALogManager"` 
 
 
 ## Sample
-Code.
-```
-LLALogManager.sharedInstance.d("DEVELOP")
+
+```swift code
+// Log Level.
+print("LEVEL")
+LLALogManager.sharedInstance.d("DEVELOP")	// Output when if setting DEBUG switch
 LLALogManager.sharedInstance.i("INFORMATION")
 LLALogManager.sharedInstance.w("WARNING")
 LLALogManager.sharedInstance.e("ERROR")
 
+
+// Print value.
+print("\nVALUE")
 let num: Int = 1
 LLALogManager.sharedInstance.d("num = \(num)")
 
-LLALogManager.sharedInstance.d("a", "b", "c")
-		
+let str: String = "word"
+LLALogManager.sharedInstance.d("str = \(str)")
+
+var str2: String? = "word2"
+str2 = nil
+LLALogManager.sharedInstance.d("str2 = \(str2 ?? "")")
+
+
+// Change separate string.
+print("\nSEPARATOR")
+LLALogManager.sharedInstance.d("Default", "separator", "is", "space.")
+
 LLALogManager.sharedInstance.separator = "⭐️"
-LLALogManager.sharedInstance.d("a", "b", "c")
+LLALogManager.sharedInstance.d("Custom", "separator", "is", ".")
 
-LLALogManager.sharedInstance.separator = LLALogManager.SEPARATOR_DEFAULT
-LLALogManager.sharedInstance.d("a", "b", "c")    
+LLALogManager.sharedInstance.separator = LLALogManager.defaultSeparator
+LLALogManager.sharedInstance.d("Back", "to", "Default", "separator.")
+
+
+// Change date format.
+print("\nDATE FORMAT")
+LLALogManager.sharedInstance.d("Default date format is \"\(LLALogManager.sharedInstance.dateFormat)\".")
+
+LLALogManager.sharedInstance.dateFormat = "MM/dd(EEE)"
+LLALogManager.sharedInstance.d("Custom date format is \"\(LLALogManager.sharedInstance.dateFormat)\".")
+
+LLALogManager.sharedInstance.dateFormat = LLALogManager.defaultDateFormat
+LLALogManager.sharedInstance.d("Back to Default date format.")
 ```
 
-Output.
-```
-2019-01-09 22:29:25.659 DEV ViewController.swift viewDidLoad():19 DEVELOP
-2019-01-09 22:29:25.659 INF ViewController.swift viewDidLoad():20 INFORMATION
-2019-01-09 22:29:25.660 WAR ViewController.swift viewDidLoad():21 WARNING
-2019-01-09 22:29:25.660 ERR ViewController.swift viewDidLoad():22 ERROR
-2019-01-09 22:29:25.660 DEV ViewController.swift viewDidLoad():26 num = 1
-2019-01-09 22:29:25.661 DEV ViewController.swift viewDidLoad():35 a b c
-2019-01-09 22:29:25.661 DEV ViewController.swift viewDidLoad():38 a⭐️b⭐️c
-2019-01-09 22:29:25.661 DEV ViewController.swift viewDidLoad():41 a b c
+
+``` output
+LEVEL
+[2019-01-01 00:01:37.008][ViewController.swift][viewDidLoad():24][DEV]DEVELOP
+[2019-01-01 00:01:37.011][ViewController.swift][viewDidLoad():25][INF]INFORMATION
+[2019-01-01 00:01:37.011][ViewController.swift][viewDidLoad():26][WAR]WARNING
+[2019-01-01 00:01:37.011][ViewController.swift][viewDidLoad():27][ERR]ERROR
+
+VALUE
+[2019-01-01 00:01:37.012][ViewController.swift][viewDidLoad():33][DEV]num = 1
+[2019-01-01 00:01:37.012][ViewController.swift][viewDidLoad():36][DEV]str = word
+[2019-01-01 00:01:37.012][ViewController.swift][viewDidLoad():40][DEV]str2 = 
+
+SEPARATOR
+[2019-01-01 00:01:37.012][ViewController.swift][viewDidLoad():45][DEV]Default separator is space.
+[2019-01-01 00:01:37.013][ViewController.swift][viewDidLoad():48][DEV]Custom⭐️separator⭐️is⭐️.
+[2019-01-01 00:01:37.013][ViewController.swift][viewDidLoad():51][DEV]Back to Default separator.
+
+DATE FORMAT
+[2019-01-01 00:01:37.013][ViewController.swift][viewDidLoad():56][DEV]Default date format is "yyyy-MM-dd HH:mm:ss.SSS".
+[01/01(Thu)][ViewController.swift][viewDidLoad():59][DEV]Custom date format is "MM/dd(EEE)".
+[2019-01-01 00:01:37.014][ViewController.swift][viewDidLoad():62][DEV]Back to Default date format.
 ```
