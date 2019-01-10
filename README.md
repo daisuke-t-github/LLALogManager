@@ -1,9 +1,8 @@
-<p align="center">
-  <img src="https://github.com/daisuke-t-github/LLALogManager/blob/master/doc/header.png" width="700">
-</p>
+<img src="https://github.com/daisuke-t-github/LLALogManager/blob/master/doc/header.png" width="700"></br>
 
 **LLALogManager** is iOS LogManager by Swift.
 
+----
 
 ## Feature
 Compared with **print()**,   
@@ -28,7 +27,7 @@ and
 ## Example
 
 ### Swift code
-```
+```swift
 // Log Level.
 print("LEVEL")
 LLALogManager.sharedInstance.d("DEVELOP")	// Output when if setting DEBUG switch
