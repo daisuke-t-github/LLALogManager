@@ -54,6 +54,17 @@ public class LLALogManager
 		#if DEBUG
 		log(Level.develop, items: items, file: file, function: function, line: line)
 		#endif
+	// MARK: method(util)
+	public func version() -> String
+	{
+		let bundle = Bundle(for: type(of: self))
+		guard let dict = bundle.infoDictionary else
+		{
+			print("error bundle get.")
+			return ""
+		}
+
+		return dict["CFBundleShortVersionString"] as! String
 	}
 	
 	public func i(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
