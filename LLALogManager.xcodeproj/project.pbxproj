@@ -17,6 +17,7 @@
 		02098B2521E7011B00BD3EA7 /* LLALogManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02098B0121E6FDB300BD3EA7 /* LLALogManager.framework */; };
 		0212066E21E7200B00076743 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0212066D21E7200B00076743 /* README.md */; };
 		0212067021E721EC00076743 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0212066F21E721EC00076743 /* LICENSE */; };
+		02AD0C7F21E84E4A00C645E3 /* alice29.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02AD0C7E21E84E4A00C645E3 /* alice29.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		02098B2021E7010100BD3EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0212066D21E7200B00076743 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0212066F21E721EC00076743 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		02AD0C7E21E84E4A00C645E3 /* alice29.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alice29.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				02098B1421E700FF00BD3EA7 /* AppDelegate.swift */,
 				02098B1621E700FF00BD3EA7 /* ViewController.swift */,
 				02098B1821E700FF00BD3EA7 /* Main.storyboard */,
+				02AD0C7E21E84E4A00C645E3 /* alice29.txt */,
 				02098B1B21E7010100BD3EA7 /* Assets.xcassets */,
 				02098B1D21E7010100BD3EA7 /* LaunchScreen.storyboard */,
 				02098B2021E7010100BD3EA7 /* Info.plist */,
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02098B1F21E7010100BD3EA7 /* LaunchScreen.storyboard in Resources */,
+				02AD0C7F21E84E4A00C645E3 /* alice29.txt in Resources */,
 				02098B1C21E7010100BD3EA7 /* Assets.xcassets in Resources */,
 				02098B1A21E700FF00BD3EA7 /* Main.storyboard in Resources */,
 			);
