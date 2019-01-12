@@ -12,13 +12,13 @@
 Compared with **print()**,   
 LLALogManager can output additional information.
 
-* Date
-* File name
-* Function name
-* Line no in File
-* Log level
+- Date
+- File name
+- Function name
+- Line no in File
+- Log level
   
-  Customizable
+Customizable
 - Output separator
 - Date format
 - Switchable Log level
