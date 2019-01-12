@@ -15,11 +15,11 @@ import LLALogManager
 class ViewController: UIViewController
 {
 	static let levelMap:[LLALogManager.Level:String] = [
-		LLALogManager.Level.debug : "🐝",
-		LLALogManager.Level.info : "ℹ️",
-		LLALogManager.Level.warn : "⚠️",
-		LLALogManager.Level.error : "💣",
-		LLALogManager.Level.fatal : "💥💥💥",
+		LLALogManager.Level.debug	: "DEB",
+		LLALogManager.Level.info	: "INF",
+		LLALogManager.Level.warn	: "WAR",
+		LLALogManager.Level.error	: "ERR",
+		LLALogManager.Level.fatal	: "FAT",
 		]
 	
 

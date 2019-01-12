@@ -44,11 +44,11 @@ public class LLALogManager
 	public static let defaultSeparator: String = " "
 	public static let defaultDateFormat: String = "yyyy-MM-dd HH:mm:ss.SSS"
 	public static let defaultLevelMap: [Level:String] = [
-		Level.debug : "DEBUG",
-		Level.info : " INFO",
-		Level.warn : " WARN",
-		Level.error : "ERROR",
-		Level.fatal : "FATAL",
+		Level.debug	: "🐝",
+		Level.info	: "ℹ️",
+		Level.warn	: "⚠️",
+		Level.error	: "💣",
+		Level.fatal	: "💥",
 		]
 
 	
