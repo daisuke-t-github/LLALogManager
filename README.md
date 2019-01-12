@@ -4,7 +4,7 @@
 [![Language Swift%204.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)](https://developer.apple.com/swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 
-**LLALogManager** is iOS LogManager by Swift.
+**LLALogManager** is Simple & Easy iOS logger.
 
 ----
 
@@ -18,9 +18,12 @@ LLALogManager can output additional information.
 * Line no in File
 * Log level
   
-and  
-- Custumize output separator
-- Custumize date format
+  Customizable
+- Output separator
+- Date format
+- Switchable Log level
+- Log level string
+- Switchable Auto new line insert
 
 
 ## Installation
@@ -50,9 +53,9 @@ llalog.f("Fatal(Impossible continue).")
 
 print("\nChange log level to ERROR")
 llalog.level = LLALogManager.Level.error
-llalog.d("Information for developers.")	// Log will not output.
-llalog.i("Generic information.")		// Log will not output.
-llalog.w("Warning.")					// Log will not output.
+llalog.d("Information for developers.") // Log will not output.
+llalog.i("Generic information.") // Log will not output.
+llalog.w("Warning.") // Log will not output.
 llalog.e("Error(Possible continue).")
 llalog.f("Fatal(Impossible continue).")
 
