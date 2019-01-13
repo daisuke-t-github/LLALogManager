@@ -4,7 +4,7 @@
 [![Language Swift%204.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)](https://developer.apple.com/swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 
-**LLALogManager** is Simple & Easy iOS logger.
+**LLALogManager** is Customizable iOS logger.
 
 ----
 
