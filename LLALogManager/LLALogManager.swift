@@ -58,9 +58,6 @@ public class LLALogManager
 
 	
 	// MARK: member
-	public weak var delegate: LLALogManagerDelegate?
-	public var level:Level = LLALogManager.defaultLevel
-	public var separator:String = LLALogManager.defaultSeparator
 	private var dateFormatter:DateFormatter = DateFormatter()
 	public var dateFormat:String = LLALogManager.defaultDateFormat
 	{
@@ -69,9 +66,13 @@ public class LLALogManager
 			dateFormatter.dateFormat = dateFormat
 		}
 	}
-	public var levelMap: [Level:String] = LLALogManager.defaultLevelMap
-	public var isAutoNewLineEnabled = true
+	public weak var delegate: LLALogManagerDelegate?
 	private var index: UInt = 0
+	public var level:Level = LLALogManager.defaultLevel
+	public var levelMap: [Level:String] = LLALogManager.defaultLevelMap
+	public var separator:String = LLALogManager.defaultSeparator
+	public var isAutoNewLineEnabled = true
+	public var isThreadingEnable = true
 	
 
 	
@@ -94,6 +95,20 @@ public class LLALogManager
 		}
 
 		return dict["CFBundleShortVersionString"] as! String
+	}
+	
+	public func incrementIndex() -> UInt
+	{
+		if index == UInt.max
+		{
+			index = 0
+		}
+		else
+		{
+			index = index + 1
+		}
+		
+		return index
 	}
 
 
@@ -145,15 +160,7 @@ public class LLALogManager
 		let fileName: String = NSString(string:file).lastPathComponent
 		let dateStr = dateFormatter.string(from: Date())
 		let levelStr = levelMap[level]!
-		
-		if index == UInt.max
-		{
-			index = 0
-		}
-		else
-		{
-			index = index + 1
-		}
+		let index = incrementIndex()
 		
 
 		if delegate != nil
