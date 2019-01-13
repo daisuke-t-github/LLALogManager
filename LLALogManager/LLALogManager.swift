@@ -12,6 +12,7 @@ import Foundation
 public protocol LLALogManagerDelegate : class
 {
 	func log(date: String,
+			 index: UInt,
 			 fileName: String,
 			 function: String,
 			 line: Int,
@@ -27,7 +28,8 @@ public class LLALogManager
 
 	// MARK: singleton
 	public static let sharedInstance = LLALogManager()
-	
+
+
 
 	// MARK: enum, const.
 	public enum Level : UInt
@@ -39,6 +41,8 @@ public class LLALogManager
 		case fatal = 4	// Fatal(Impossible Continue).
 	}
 
+	
+	
 	// default.
 	public static let defaultLevel: Level = Level.debug
 	public static let defaultSeparator: String = " "
@@ -50,6 +54,7 @@ public class LLALogManager
 		Level.error	: "💣",
 		Level.fatal	: "💥",
 		]
+
 
 	
 	// MARK: member
@@ -66,15 +71,17 @@ public class LLALogManager
 	}
 	public var levelMap: [Level:String] = LLALogManager.defaultLevelMap
 	public var isAutoNewLineEnabled = true
-	
+	private var index: UInt = 0
 	
 
+	
 	// MARK: life-cycle
 	private init()
 	{
 		dateFormatter.dateFormat = dateFormat
 	}
-	
+
+
 
 	// MARK: method(util)
 	public func version() -> String
@@ -88,8 +95,9 @@ public class LLALogManager
 
 		return dict["CFBundleShortVersionString"] as! String
 	}
-	
-	
+
+
+
 	// MARK: method(log)
 	public func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
 		log(Level.debug, items: items, file: file, function: function, line: line)
@@ -137,10 +145,21 @@ public class LLALogManager
 		let fileName: String = NSString(string:file).lastPathComponent
 		let dateStr = dateFormatter.string(from: Date())
 		let levelStr = levelMap[level]!
+		
+		if index == UInt.max
+		{
+			index = 0
+		}
+		else
+		{
+			index = index + 1
+		}
+		
 
 		if delegate != nil
 		{
 			delegate!.log(date: dateStr,
+						  index: index,
 						  fileName: fileName,
 						  function: function,
 						  line: line,
@@ -149,7 +168,7 @@ public class LLALogManager
 		}
 		else
 		{
-			print("[\(dateStr)][\(fileName)][\(function):\(line)][\(levelStr)]",
+			print("[\(dateStr)][\(index)][\(fileName)][\(function):\(line)][\(levelStr)]",
 				terminator: "")
 
 			var separator = ""
