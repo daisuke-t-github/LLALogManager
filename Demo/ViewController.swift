@@ -135,13 +135,14 @@ class ViewController: UIViewController
 extension ViewController : LLALogManagerDelegate
 {
 	func log(date: String,
+			 index: UInt,
 			 fileName: String,
 			 function: String,
 			 line: Int,
 			 level: String,
 			 items:[Any]) -> Void
 	{
-		print("\(level) \(fileName) \(function):\(line)\t --- ",
+		print("\(level) \(index) \(fileName) \(function):\(line)\t --- ",
 			terminator: "")
 		
 		var separator = ""
