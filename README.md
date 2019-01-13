@@ -13,6 +13,7 @@ Compared with **print()**,
 LLALogManager can output additional information.
 
 - Date
+- Log index
 - File name
 - Function name
 - Line no in File
@@ -103,31 +104,31 @@ llalog.delegate = nil
 ### Output
 ```
 LEVEL
-[2019-01-12 12:51:57.820][ViewController.swift][viewDidLoad():45][🐝]Information for developers.
-[2019-01-12 12:51:57.821][ViewController.swift][viewDidLoad():46][ℹ️]Generic information.
-[2019-01-12 12:51:57.821][ViewController.swift][viewDidLoad():47][⚠️]Warning.
-[2019-01-12 12:51:57.821][ViewController.swift][viewDidLoad():48][💣]Error(Possible continue).
-[2019-01-12 12:51:57.821][ViewController.swift][viewDidLoad():49][💥]Fatal(Impossible continue).
+[2019-01-13 23:10:09.110][2][ViewController.swift][viewDidLoad():45][🐝]Information for developers.
+[2019-01-13 23:10:09.110][3][ViewController.swift][viewDidLoad():46][ℹ️]Generic information.
+[2019-01-13 23:10:09.110][4][ViewController.swift][viewDidLoad():47][⚠️]Warning.
+[2019-01-13 23:10:09.111][5][ViewController.swift][viewDidLoad():48][💣]Error(Possible continue).
+[2019-01-13 23:10:09.111][6][ViewController.swift][viewDidLoad():49][💥]Fatal(Impossible continue).
 
 Change log level to ERROR
-[2019-01-12 12:51:57.821][ViewController.swift][viewDidLoad():56][💣]Error(Possible continue).
-[2019-01-12 12:51:57.822][ViewController.swift][viewDidLoad():57][💥]Fatal(Impossible continue).
+[2019-01-13 23:10:09.111][7][ViewController.swift][viewDidLoad():56][💣]Error(Possible continue).
+[2019-01-13 23:10:09.111][8][ViewController.swift][viewDidLoad():57][💥]Fatal(Impossible continue).
 
 LOG LEVEL STRING
-[2019-01-12 12:51:57.822][ViewController.swift][viewDidLoad():65][DEB]DEBUG
-[2019-01-12 12:51:57.822][ViewController.swift][viewDidLoad():66][INF]INFO
-[2019-01-12 12:51:57.822][ViewController.swift][viewDidLoad():67][WAR]WARN
-[2019-01-12 12:51:57.822][ViewController.swift][viewDidLoad():68][ERR]ERROR
-[2019-01-12 12:51:57.823][ViewController.swift][viewDidLoad():69][FAT]FATAL
+[2019-01-13 23:10:09.111][9][ViewController.swift][viewDidLoad():65][DEB]DEBUG
+[2019-01-13 23:10:09.111][10][ViewController.swift][viewDidLoad():66][INF]INFO
+[2019-01-13 23:10:09.112][11][ViewController.swift][viewDidLoad():67][WAR]WARN
+[2019-01-13 23:10:09.112][12][ViewController.swift][viewDidLoad():68][ERR]ERROR
+[2019-01-13 23:10:09.126][13][ViewController.swift][viewDidLoad():69][FAT]FATAL
 
 SEPARATOR
-[2019-01-12 12:51:57.823][ViewController.swift][viewDidLoad():75][ℹ️]Default separator is space.
-[2019-01-12 12:51:57.843][ViewController.swift][viewDidLoad():78][ℹ️]Custom⭐️separator⭐️is⭐️.
+[2019-01-13 23:10:09.126][14][ViewController.swift][viewDidLoad():75][ℹ️]Default separator is space.
+[2019-01-13 23:10:09.127][15][ViewController.swift][viewDidLoad():78][ℹ️]Custom⭐️separator⭐️is⭐️.
 
 DATE FORMAT
-[2019-01-12 12:51:57.844][ViewController.swift][viewDidLoad():85][ℹ️]Default date format is "yyyy-MM-dd HH:mm:ss.SSS".
-[01/12(Sat)][ViewController.swift][viewDidLoad():88][ℹ️]Custom date format is "MM/dd(EEE)".
+[2019-01-13 23:10:09.127][16][ViewController.swift][viewDidLoad():85][ℹ️]Default date format is "yyyy-MM-dd HH:mm:ss.SSS".
+[01/13(Sun)][17][ViewController.swift][viewDidLoad():88][ℹ️]Custom date format is "MM/dd(EEE)".
 
 LOG FORMAT
-ℹ️ ViewController.swift viewDidLoad():96	 --- Custom log format.
+ℹ️ 18 ViewController.swift viewDidLoad():96	 --- Custom log format.
 ```
