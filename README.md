@@ -1,4 +1,4 @@
-<img src="https://github.com/daisuke-t-github/LLALogManager/blob/master/doc/header.png" width="700"></br>
+<img src="https://github.com/daisuke-t-jp/LLALogManager/blob/master/doc/header.png" width="700"></br>
 
 ![Platform](https://img.shields.io/badge/Platform-iOS%2010.0+-blue.svg)
 [![Language Swift%204.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)](https://developer.apple.com/swift)
@@ -32,7 +32,7 @@ LLALogManager can output additional information.
 
 ## Installation
 ### Carthage
-`github "daisuke-t-github/LLALogManager"` 
+`github "daisuke-t-jp/LLALogManager"` 
 
 
 ## Example
