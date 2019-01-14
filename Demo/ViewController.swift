@@ -97,38 +97,15 @@ class ViewController: UIViewController
 		llalog.delegate = nil
 
 
-		/*
-		// Bench
-		guard let path = Bundle.main.path( forResource: "alice29", ofType: "txt" ) else
+		// Thread Test.
+		llalog.isThreadingEnable = true
+		for i in 0..<UInt8.max
 		{
-			print("error file path is nil.")
-			return
-		}
-		
-
-		var fileContent: String = ""
-		do
-		{
-			fileContent = try String( contentsOf: URL(fileURLWithPath: path), encoding: String.Encoding.utf8 )
-		}
-		catch
-		{
-			print("error file open.")
-			return
-		}
-		
-		
-		let start = Date()
-
-		llalog.isAutoNewLineEnabled = false
-		for chr in fileContent
-		{
-			llalog.i(chr)
+			llalog.i(i)
 		}
 
-		let elapsed = Date().timeIntervalSince(start)
-		print("\n elapsed = \(elapsed)")
-		*/
+		llalog.isThreadingEnable = false
+		llalog.i("😀")
 	}
 }
 
