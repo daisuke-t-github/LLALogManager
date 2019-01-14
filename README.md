@@ -9,6 +9,8 @@
 ----
 
 ## Feature
+
+### Additional Information
 Compared with **print()**,   
 LLALogManager can output additional information.
 
@@ -18,13 +20,14 @@ LLALogManager can output additional information.
 - Function name
 - Line no in File
 - Log level
-  
-Customizable
+
+### Customizable
 - Output separator
 - Date format
 - Switchable Log level
 - Log level string
 - Switchable Auto new line insert
+- Support threading
 
 
 ## Installation
