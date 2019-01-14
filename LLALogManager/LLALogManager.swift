@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 public protocol LLALogManagerDelegate : class
 {
 	func log(date: String,
@@ -41,6 +42,17 @@ public class LLALogManager
 		case fatal = 4	// Fatal(Impossible Continue).
 	}
 
+	private let keyDelegate = "delegate"
+	private let keyAutoNewLine = "autonewline"
+	private let keySeparator = "separator"
+	private let keyDate = "date"
+	private let keyIndex = "index"
+	private let keyFileName = "fileName"
+	private let keyFunction = "function"
+	private let keyLine = "line"
+	private let keyLevel = "level"
+	private let keyItems = "items"
+
 	
 	
 	// default.
@@ -58,6 +70,9 @@ public class LLALogManager
 
 	
 	// MARK: member
+	public weak var delegate: LLALogManagerDelegate?
+	private var dispatchQueue: DispatchQueue? = nil
+
 	private var dateFormatter:DateFormatter = DateFormatter()
 	public var dateFormat:String = LLALogManager.defaultDateFormat
 	{
@@ -66,13 +81,12 @@ public class LLALogManager
 			dateFormatter.dateFormat = dateFormat
 		}
 	}
-	public weak var delegate: LLALogManagerDelegate?
 	private var index: UInt = 0
 	public var level:Level = LLALogManager.defaultLevel
 	public var levelMap: [Level:String] = LLALogManager.defaultLevelMap
 	public var separator:String = LLALogManager.defaultSeparator
 	public var isAutoNewLineEnabled = true
-	public var isThreadingEnable = true
+	public var isThreadingEnable = false
 	
 
 	
@@ -80,6 +94,9 @@ public class LLALogManager
 	private init()
 	{
 		dateFormatter.dateFormat = dateFormat
+		
+		let queueLabel = name() + NSUUID().uuidString
+		dispatchQueue = DispatchQueue(label: queueLabel)
 	}
 
 
@@ -97,7 +114,13 @@ public class LLALogManager
 		return dict["CFBundleShortVersionString"] as! String
 	}
 	
-	public func incrementIndex() -> UInt
+	private func name() -> String
+	{
+		let bundle = Bundle(for: type(of: self))
+		return bundle.bundleIdentifier!
+	}
+	
+	private func incrementIndex() -> UInt
 	{
 		if index == UInt.max
 		{
@@ -110,7 +133,7 @@ public class LLALogManager
 		
 		return index
 	}
-
+	
 
 
 	// MARK: method(log)
@@ -149,7 +172,7 @@ public class LLALogManager
 		log(Level.fatal, items: items, file: file, function: function, line: line)
 	}
 
-	private func log(_ level: Level, items:[Any], file: String, function: String, line: Int) -> Void {
+	private func log(_ level: Level, items: [Any], file: String, function: String, line: Int) -> Void {
 
 		guard level.rawValue >= self.level.rawValue else
 		{
@@ -157,42 +180,81 @@ public class LLALogManager
 		}
 
 
-		let fileName: String = NSString(string:file).lastPathComponent
-		let dateStr = dateFormatter.string(from: Date())
-		let levelStr = levelMap[level]!
-		let index = incrementIndex()
-		
+		let param: [String : Any?] = [
+			keyDelegate : delegate,
+			keyAutoNewLine : isAutoNewLineEnabled,
+			keySeparator : separator,
+			keyDate : dateFormatter.string(from: Date()),
+			keyIndex : incrementIndex(),
+			keyFileName : NSString(string:file).lastPathComponent,
+			keyFunction : function,
+			keyLine : line,
+			keyLevel : levelMap[level]!,
+			keyItems : items
+			]
 
+		if isThreadingEnable && level != Level.fatal
+		{
+			guard dispatchQueue != nil else
+			{
+				return
+			}
+
+			dispatchQueue?.async(execute: {
+				self.log(param)
+			})
+		}
+		else
+		{
+			self.log(param)
+		}
+
+	}
+	
+	private func log(_ param: [String: Any?])
+	{
+		let delegate: LLALogManagerDelegate? = param[keyDelegate] as? LLALogManagerDelegate
+		let isAutoNewLine = param[keyAutoNewLine] as! Bool
+		let date = param[keyDate] as! String
+		let index = param[keyIndex] as! UInt
+		let fileName = param[keyFileName] as! String
+		let function = param[keyFunction] as! String
+		let line = param[keyLine] as! Int
+		let level = param[keyLevel] as! String
+		let items = param[keyItems] as! [Any]
+		let separator = param[keySeparator] as! String
+
+		
 		if delegate != nil
 		{
-			delegate!.log(date: dateStr,
+			delegate!.log(date: date,
 						  index: index,
 						  fileName: fileName,
 						  function: function,
 						  line: line,
-						  level: levelStr,
+						  level: level,
 						  items: items)
 		}
 		else
 		{
-			print("[\(dateStr)][\(index)][\(fileName)][\(function):\(line)][\(levelStr)]",
+			print("[\(date)][\(index)][\(fileName)][\(function):\(line)][\(level)]",
 				terminator: "")
 
-			var separator = ""
+			var separator2 = ""
 			for elm in items
 			{
 				autoreleasepool
 				{
-					print(separator, terminator: "")
+					print(separator2, terminator: "")
 					print(elm, terminator: "")
 
-					separator = self.separator
+					separator2 = separator
 				}
 			}
 		}
 		
 		
-		if isAutoNewLineEnabled
+		if isAutoNewLine
 		{
 			print("")
 		}
