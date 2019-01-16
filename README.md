@@ -6,8 +6,6 @@
 
 Customizable iOS logger.
 
-----
-
 ### Feature
 
 #### Additional Information
