@@ -19,7 +19,6 @@ public protocol LLALogManagerDelegate : class
 			 line: Int,
 			 level: String,
 			 items:[Any]) -> Void
-
 }
 
 
@@ -59,7 +58,7 @@ public class LLALogManager
 	public static let defaultLevel: Level = Level.debug
 	public static let defaultSeparator: String = " "
 	public static let defaultDateFormat: String = "yyyy-MM-dd HH:mm:ss.SSS"
-	public static let defaultLevelMap: [Level:String] = [
+	public static let defaultLevelMap: [Level : String] = [
 		Level.debug	: "🐝",
 		Level.info	: "ℹ️",
 		Level.warn	: "⚠️",
@@ -73,8 +72,8 @@ public class LLALogManager
 	public weak var delegate: LLALogManagerDelegate?
 	private var dispatchQueue: DispatchQueue? = nil
 
-	private var dateFormatter:DateFormatter = DateFormatter()
-	public var dateFormat:String = LLALogManager.defaultDateFormat
+	private var dateFormatter: DateFormatter = DateFormatter()
+	public var dateFormat: String = LLALogManager.defaultDateFormat
 	{
 		didSet
 		{
@@ -82,9 +81,9 @@ public class LLALogManager
 		}
 	}
 	private var index: UInt = 0
-	public var level:Level = LLALogManager.defaultLevel
-	public var levelMap: [Level:String] = LLALogManager.defaultLevelMap
-	public var separator:String = LLALogManager.defaultSeparator
+	public var level: Level = LLALogManager.defaultLevel
+	public var levelMap: [Level : String] = LLALogManager.defaultLevelMap
+	public var separator: String = LLALogManager.defaultSeparator
 	public var isAutoNewLineEnabled = true
 	public var isThreadingEnable = false
 	
@@ -186,7 +185,7 @@ public class LLALogManager
 			keySeparator : separator,
 			keyDate : dateFormatter.string(from: Date()),
 			keyIndex : incrementIndex(),
-			keyFileName : NSString(string:file).lastPathComponent,
+			keyFileName : NSString(string: file).lastPathComponent,
 			keyFunction : function,
 			keyLine : line,
 			keyLevel : levelMap[level]!,
