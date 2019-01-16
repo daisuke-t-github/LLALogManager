@@ -1,16 +1,16 @@
 <img src="https://github.com/daisuke-t-jp/LLALogManager/blob/master/doc/header.png" width="700"></br>
-
+------
 ![Platform](https://img.shields.io/badge/Platform-iOS%2010.0+-blue.svg)
 [![Language Swift%204.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)](https://developer.apple.com/swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 
-**LLALogManager** is Customizable iOS logger.
+Customizable iOS logger.
 
 ----
 
-## Feature
+### Feature
 
-### Additional Information
+#### Additional Information
 Compared with **print()**,   
 LLALogManager can output additional information.
 
@@ -21,7 +21,7 @@ LLALogManager can output additional information.
 - Line no in File
 - Log level
 
-### Customizable
+#### Customizable
 - Output separator
 - Date format
 - Switchable Log level
@@ -30,14 +30,13 @@ LLALogManager can output additional information.
 - Support threading
 
 
-## Installation
 ### Carthage
 `github "daisuke-t-jp/LLALogManager"` 
 
 
-## Example
+### Example
 
-### Swift code
+#### Swift code
 ```swift
 
 import LLALogManager
@@ -104,7 +103,7 @@ llalog.i("Custom log format.")
 llalog.delegate = nil
 ```
 
-### Output
+#### Output
 ```
 LEVEL
 [2019-01-13 23:10:09.110][2][ViewController.swift][viewDidLoad():45][🐝]Information for developers.
