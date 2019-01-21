@@ -3,6 +3,7 @@
 ![Platform](https://img.shields.io/badge/Platform-iOS%2010.0+-blue.svg)
 [![Language Swift%204.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)](https://developer.apple.com/swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
+[![Cocoapods](https://img.shields.io/cocoapods/v/LLALogManager.svg)](https://cocoapods.org/pods/LLALogManager)
 
 Customizable iOS logger.
 
@@ -28,8 +29,19 @@ LLALogManager can output additional information.
 - Support threading
 
 
-### Carthage
+### Install
+#### Carthage
 `github "daisuke-t-jp/LLALogManager"` 
+
+#### CocoaPods
+```
+platform :ios, '10.0'
+use_frameworks!
+
+target 'target' do
+pod 'LLALogManager'
+end
+```
 
 
 ### Example
