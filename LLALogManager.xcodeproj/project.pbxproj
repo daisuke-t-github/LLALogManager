@@ -17,6 +17,7 @@
 		02098B2521E7011B00BD3EA7 /* LLALogManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02098B0121E6FDB300BD3EA7 /* LLALogManager.framework */; };
 		0212066E21E7200B00076743 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0212066D21E7200B00076743 /* README.md */; };
 		0212067021E721EC00076743 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0212066F21E721EC00076743 /* LICENSE */; };
+		02C8CD8A21F56A400078D731 /* LLALogManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 02C8CD8921F56A400078D731 /* LLALogManager.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		02098B2021E7010100BD3EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0212066D21E7200B00076743 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0212066F21E721EC00076743 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		02C8CD8921F56A400078D731 /* LLALogManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLALogManager.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				0212066D21E7200B00076743 /* README.md */,
 				0212066F21E721EC00076743 /* LICENSE */,
+				02C8CD8921F56A400078D731 /* LLALogManager.podspec */,
 				02098B0321E6FDB300BD3EA7 /* LLALogManager */,
 				02098B1321E700FF00BD3EA7 /* Demo */,
 				02098B0221E6FDB300BD3EA7 /* Products */,
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C8CD8A21F56A400078D731 /* LLALogManager.podspec in Resources */,
 				0212067021E721EC00076743 /* LICENSE in Resources */,
 				0212066E21E7200B00076743 /* README.md in Resources */,
 			);
