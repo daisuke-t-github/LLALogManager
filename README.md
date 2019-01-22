@@ -10,7 +10,6 @@ Customizable iOS logger.
 ### Feature
 
 #### Additional Information
-Compared with **print()**,   
 LLALogManager can output additional information.
 
 - Date
