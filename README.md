@@ -7,9 +7,8 @@
 
 Customizable iOS logger.
 
-### Feature
-
-#### Additional Information
+# Feature
+### Additional Information
 LLALogManager can output additional information.
 
 - Date
@@ -19,7 +18,7 @@ LLALogManager can output additional information.
 - Line no in File
 - Log level
 
-#### Customizable
+### Customizable
 - Output separator
 - Date format
 - Switchable Log level
@@ -28,11 +27,11 @@ LLALogManager can output additional information.
 - Support threading
 
 
-### Install
-#### Carthage
+# Install
+### Carthage
 `github "daisuke-t-jp/LLALogManager"` 
 
-#### CocoaPods
+### CocoaPods
 ```
 platform :ios, '10.0'
 use_frameworks!
@@ -43,9 +42,8 @@ end
 ```
 
 
-### Example
-
-#### Swift code
+# Example
+### Swift code
 ```swift
 
 import LLALogManager
@@ -112,7 +110,7 @@ llalog.i("Custom log format.")
 llalog.delegate = nil
 ```
 
-#### Output
+### Output
 ```
 LEVEL
 [2019-01-13 23:10:09.110][2][ViewController.swift][viewDidLoad():45][🐝]Information for developers.
