@@ -1,5 +1,5 @@
 PODS:
-  - LLALogManager (1.0.9)
+  - LLALogManager (1.0.10)
 
 DEPENDENCIES:
   - LLALogManager (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LLALogManager: b667a8e05c98f1e5bc17a5426208de6edca633e8
+  LLALogManager: 7932553297a9413b03ca59b50717cdb021364dfb
 
 PODFILE CHECKSUM: 4ff7eda3336595ad4e6c4b707757bbe3db0584fd
 
