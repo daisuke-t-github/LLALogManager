@@ -6,7 +6,7 @@
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # CocoaPods
-/Pods
+Pods/
 
 # Carthage
 /Carthage
