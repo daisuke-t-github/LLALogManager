@@ -4,6 +4,7 @@
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/xcshareddata/
 **/xcshareddata/WorkspaceSettings.xcsettings
+UserInterfaceState.xcuserstate
 
 # CocoaPods
 Pods/
