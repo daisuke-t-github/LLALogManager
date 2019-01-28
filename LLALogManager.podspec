@@ -11,6 +11,5 @@ s.ios.deployment_target = "10.0"
 s.platform       = :ios, "10.0"
 s.swift_version  = "4.2"
 s.source       = { :git => "https://github.com/daisuke-t-jp/LLALogManager.git", :tag => "1.0.9" }
-s.source_files  = "LLALogManager"
-s.source_files  = 'LLALogManager/*.{h,swift}'
+s.source_files  = 'LLALogManager/LLALogManager/*.{h,swift}'
 end
