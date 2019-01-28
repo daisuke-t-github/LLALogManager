@@ -23,7 +23,7 @@ LLALogManager can output additional information.
 - Date format
 - Switchable Log level
 - Log level string
-- Switchable Auto new line insert
+- Switchable *Auto new line insert*
 - Support threading
 
 
