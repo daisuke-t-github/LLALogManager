@@ -1,0 +1,16 @@
+PODS:
+  - LLALogManager (1.0.9)
+
+DEPENDENCIES:
+  - LLALogManager (from `../`)
+
+EXTERNAL SOURCES:
+  LLALogManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LLALogManager: b667a8e05c98f1e5bc17a5426208de6edca633e8
+
+PODFILE CHECKSUM: 4ff7eda3336595ad4e6c4b707757bbe3db0584fd
+
+COCOAPODS: 1.4.0
