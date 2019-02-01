@@ -26,12 +26,12 @@ public protocol LLALogManagerDelegate : class
 public class LLALogManager
 {
 
-	// MARK: singleton
+	// MARK: - Singleton
 	public static let sharedInstance = LLALogManager()
 
 
 
-	// MARK: enum, const.
+	// MARK: - Enum, const.
 	public enum Level : UInt
 	{
 		case debug = 0	// Information for developers.
@@ -51,8 +51,6 @@ public class LLALogManager
 	private let keyLine = "line"
 	private let keyLevel = "level"
 	private let keyItems = "items"
-
-	
 	
 	// default.
 	public static let defaultLevel: Level = Level.debug
@@ -68,7 +66,7 @@ public class LLALogManager
 
 
 	
-	// MARK: member
+	// MARK: - Member
 	public weak var delegate: LLALogManagerDelegate?
 	private var dispatchQueue: DispatchQueue? = nil
 
@@ -89,7 +87,7 @@ public class LLALogManager
 	
 
 	
-	// MARK: life-cycle
+	// MARK: - Life-cycle
 	private init()
 	{
 		dateFormatter.dateFormat = dateFormat
@@ -100,8 +98,8 @@ public class LLALogManager
 
 
 
-	// MARK: method(util)
 	public func version() -> String
+	// MARK: - Function(Util)
 	{
 		let bundle = Bundle(for: type(of: self))
 		guard let dict = bundle.infoDictionary else
@@ -135,7 +133,7 @@ public class LLALogManager
 	
 
 
-	// MARK: method(log)
+	// MARK: - Function(Log)
 	public func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
 		log(Level.debug, items: items, file: file, function: function, line: line)
 	}
