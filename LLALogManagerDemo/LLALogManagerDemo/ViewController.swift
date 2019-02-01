@@ -36,7 +36,7 @@ class ViewController: UIViewController
 		llalog.level = LLALogManager.Level.info
 		#endif
 		
-		llalog.i("Version \(llalog.version())")
+		llalog.i("Version \(llalog.version)")
 		let level: LLALogManager.Level = llalog.level
 
 		

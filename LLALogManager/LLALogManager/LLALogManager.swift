@@ -92,14 +92,14 @@ public class LLALogManager
 	{
 		dateFormatter.dateFormat = dateFormat
 		
-		let queueLabel = name() + NSUUID().uuidString
+		let queueLabel = name + NSUUID().uuidString
 		dispatchQueue = DispatchQueue(label: queueLabel)
 	}
 
 
 
-	public func version() -> String
 	// MARK: - Function(Util)
+	public var version: String
 	{
 		let bundle = Bundle(for: type(of: self))
 		guard let dict = bundle.infoDictionary else
@@ -111,7 +111,7 @@ public class LLALogManager
 		return dict["CFBundleShortVersionString"] as! String
 	}
 	
-	private func name() -> String
+	private var name: String
 	{
 		let bundle = Bundle(for: type(of: self))
 		return bundle.bundleIdentifier!
