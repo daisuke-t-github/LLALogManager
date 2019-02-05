@@ -10,8 +10,7 @@ import Foundation
 
 
 
-public protocol LLALogManagerDelegate : class
-{
+public protocol LLALogManagerDelegate : class {
 	func log(date: String,
 			 index: UInt,
 			 fileName: String,
@@ -23,8 +22,7 @@ public protocol LLALogManagerDelegate : class
 
 
 
-public class LLALogManager
-{
+public class LLALogManager {
 
 	// MARK: - Singleton
 	public static let sharedInstance = LLALogManager()
@@ -32,8 +30,7 @@ public class LLALogManager
 
 
 	// MARK: - Enum, const.
-	public enum Level : UInt
-	{
+	public enum Level : UInt {
 		case debug = 0	// Information for developers.
 		case info = 1	// Generic information.
 		case warn = 2	// Warning.
@@ -71,10 +68,8 @@ public class LLALogManager
 	private var dispatchQueue: DispatchQueue? = nil
 
 	private var dateFormatter: DateFormatter = DateFormatter()
-	public var dateFormat: String = LLALogManager.defaultDateFormat
-	{
-		didSet
-		{
+	public var dateFormat: String = LLALogManager.defaultDateFormat {
+		didSet {
 			dateFormatter.dateFormat = dateFormat
 		}
 	}
@@ -88,8 +83,7 @@ public class LLALogManager
 
 	
 	// MARK: - Life-cycle
-	private init()
-	{
+	private init() {
 		dateFormatter.dateFormat = dateFormat
 		
 		let queueLabel = name + NSUUID().uuidString
@@ -99,11 +93,9 @@ public class LLALogManager
 
 
 	// MARK: - Function(Util)
-	public var version: String
-	{
+	public var version: String {
 		let bundle = Bundle(for: type(of: self))
-		guard let dict = bundle.infoDictionary else
-		{
+		guard let dict = bundle.infoDictionary else {
 			print("error bundle get.")
 			return ""
 		}
@@ -111,20 +103,16 @@ public class LLALogManager
 		return dict["CFBundleShortVersionString"] as! String
 	}
 	
-	private var name: String
-	{
+	private var name: String {
 		let bundle = Bundle(for: type(of: self))
 		return bundle.bundleIdentifier!
 	}
 	
-	private func incrementIndex() -> UInt
-	{
-		if index == UInt.max
-		{
+	private func incrementIndex() -> UInt {
+		if index == UInt.max {
 			index = 0
 		}
-		else
-		{
+		else {
 			index = index + 1
 		}
 		
@@ -171,8 +159,7 @@ public class LLALogManager
 
 	private func log(_ level: Level, items: [Any], file: String, function: String, line: Int) -> Void {
 
-		guard level.rawValue >= self.level.rawValue else
-		{
+		guard level.rawValue >= self.level.rawValue else {
 			return
 		}
 
@@ -190,10 +177,8 @@ public class LLALogManager
 			keyItems : items
 			]
 
-		if isThreadingEnable && level != Level.fatal
-		{
-			guard dispatchQueue != nil else
-			{
+		if isThreadingEnable && level != Level.fatal {
+			guard dispatchQueue != nil else {
 				return
 			}
 
@@ -201,15 +186,13 @@ public class LLALogManager
 				self.log(param)
 			})
 		}
-		else
-		{
+		else {
 			self.log(param)
 		}
 
 	}
 	
-	private func log(_ param: [String: Any?])
-	{
+	private func log(_ param: [String: Any?]) {
 		let delegate: LLALogManagerDelegate? = param[keyDelegate] as? LLALogManagerDelegate
 		let isAutoNewLine = param[keyAutoNewLine] as! Bool
 		let date = param[keyDate] as! String
@@ -222,8 +205,7 @@ public class LLALogManager
 		let separator = param[keySeparator] as! String
 
 		
-		if delegate != nil
-		{
+		if delegate != nil {
 			delegate!.log(date: date,
 						  index: index,
 						  fileName: fileName,
@@ -232,27 +214,25 @@ public class LLALogManager
 						  level: level,
 						  items: items)
 		}
-		else
-		{
+		else {
 			print("[\(date)][\(index)][\(fileName)][\(function):\(line)][\(level)]",
 				terminator: "")
 
 			var separator2 = ""
-			for elm in items
-			{
-				autoreleasepool
-				{
+			for elm in items {
+
+				autoreleasepool {
 					print(separator2, terminator: "")
 					print(elm, terminator: "")
 
 					separator2 = separator
 				}
+
 			}
 		}
 		
 		
-		if isAutoNewLine
-		{
+		if isAutoNewLine {
 			print("")
 		}
 	}

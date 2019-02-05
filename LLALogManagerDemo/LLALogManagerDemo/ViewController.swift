@@ -12,8 +12,7 @@ import LLALogManager
 
 
 
-class ViewController: UIViewController
-{
+class ViewController: UIViewController {
 	static let levelMap:[LLALogManager.Level:String] = [
 		LLALogManager.Level.debug	: "DEB",
 		LLALogManager.Level.info	: "INF",
@@ -99,8 +98,7 @@ class ViewController: UIViewController
 
 		// Thread Test.
 		llalog.isThreadingEnable = true
-		for i in 0..<UInt8.max
-		{
+		for i in 0..<UInt8.max {
 			llalog.i(i)
 		}
 
@@ -109,26 +107,25 @@ class ViewController: UIViewController
 	}
 }
 
-extension ViewController : LLALogManagerDelegate
-{
+extension ViewController : LLALogManagerDelegate {
 	func log(date: String,
 			 index: UInt,
 			 fileName: String,
 			 function: String,
 			 line: Int,
 			 level: String,
-			 items:[Any]) -> Void
-	{
+			 items:[Any]) -> Void {
 		print("\(level) \(index) \(fileName) \(function):\(line)\t --- ",
 			terminator: "")
 		
 		var separator = ""
-		for elm in items
-		{
+		for elm in items {
+
 			print(separator, terminator: "")
 			print(elm, terminator: "")
 			
 			separator = " "
+
 		}
 		
 	}
