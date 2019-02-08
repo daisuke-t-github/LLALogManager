@@ -38,16 +38,16 @@ public class LLALogManager {
 		case fatal = 4	// Fatal(Impossible Continue).
 	}
 
-	private let keyDelegate = "delegate"
-	private let keyAutoNewLine = "autonewline"
-	private let keySeparator = "separator"
-	private let keyDate = "date"
-	private let keyIndex = "index"
-	private let keyFileName = "fileName"
-	private let keyFunction = "function"
-	private let keyLine = "line"
-	private let keyLevel = "level"
-	private let keyItems = "items"
+	private static let keyDelegate = "delegate"
+	private static let keyAutoNewLine = "autonewline"
+	private static let keySeparator = "separator"
+	private static let keyDate = "date"
+	private static let keyIndex = "index"
+	private static let keyFileName = "fileName"
+	private static let keyFunction = "function"
+	private static let keyLine = "line"
+	private static let keyLevel = "level"
+	private static let keyItems = "items"
 	
 	// default.
 	public static let defaultLevel: Level = Level.debug
@@ -165,16 +165,16 @@ public class LLALogManager {
 
 
 		let param: [String : Any?] = [
-			keyDelegate : delegate,
-			keyAutoNewLine : isAutoNewLineEnabled,
-			keySeparator : separator,
-			keyDate : dateFormatter.string(from: Date()),
-			keyIndex : incrementIndex(),
-			keyFileName : NSString(string: file).lastPathComponent,
-			keyFunction : function,
-			keyLine : line,
-			keyLevel : levelMap[level]!,
-			keyItems : items
+			LLALogManager.keyDelegate : delegate,
+			LLALogManager.keyAutoNewLine : isAutoNewLineEnabled,
+			LLALogManager.keySeparator : separator,
+			LLALogManager.keyDate : dateFormatter.string(from: Date()),
+			LLALogManager.keyIndex : incrementIndex(),
+			LLALogManager.keyFileName : NSString(string: file).lastPathComponent,
+			LLALogManager.keyFunction : function,
+			LLALogManager.keyLine : line,
+			LLALogManager.keyLevel : levelMap[level]!,
+			LLALogManager.keyItems : items
 			]
 
 		if isThreadingEnable && level != Level.fatal {
@@ -193,16 +193,16 @@ public class LLALogManager {
 	}
 	
 	private func log(_ param: [String: Any?]) {
-		let delegate: LLALogManagerDelegate? = param[keyDelegate] as? LLALogManagerDelegate
-		let isAutoNewLine = param[keyAutoNewLine] as! Bool
-		let date = param[keyDate] as! String
-		let index = param[keyIndex] as! UInt
-		let fileName = param[keyFileName] as! String
-		let function = param[keyFunction] as! String
-		let line = param[keyLine] as! Int
-		let level = param[keyLevel] as! String
-		let items = param[keyItems] as! [Any]
-		let separator = param[keySeparator] as! String
+		let delegate: LLALogManagerDelegate? = param[LLALogManager.keyDelegate] as? LLALogManagerDelegate
+		let isAutoNewLine = param[LLALogManager.keyAutoNewLine] as! Bool
+		let date = param[LLALogManager.keyDate] as! String
+		let index = param[LLALogManager.keyIndex] as! UInt
+		let fileName = param[LLALogManager.keyFileName] as! String
+		let function = param[LLALogManager.keyFunction] as! String
+		let line = param[LLALogManager.keyLine] as! Int
+		let level = param[LLALogManager.keyLevel] as! String
+		let items = param[LLALogManager.keyItems] as! [Any]
+		let separator = param[LLALogManager.keySeparator] as! String
 
 		
 		if delegate != nil {
