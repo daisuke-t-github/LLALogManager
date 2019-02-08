@@ -6,7 +6,7 @@
 //  Copyright © 2019 Daisuke T. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for LLALogManager.
 FOUNDATION_EXPORT double LLALogManagerVersionNumber;

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02098B0021E6FDB300BD3EA7"
                BuildableName = "LLALogManager.framework"
-               BlueprintName = "LLALogManager"
+               BlueprintName = "LLALogManage-iOS"
                ReferencedContainer = "container:LLALogManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02098B0021E6FDB300BD3EA7"
             BuildableName = "LLALogManager.framework"
-            BlueprintName = "LLALogManager"
+            BlueprintName = "LLALogManage-iOS"
             ReferencedContainer = "container:LLALogManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02098B0021E6FDB300BD3EA7"
             BuildableName = "LLALogManager.framework"
-            BlueprintName = "LLALogManager"
+            BlueprintName = "LLALogManage-iOS"
             ReferencedContainer = "container:LLALogManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
