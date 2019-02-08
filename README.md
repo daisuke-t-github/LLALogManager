@@ -5,7 +5,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods](https://img.shields.io/cocoapods/v/LLALogManager.svg)](https://cocoapods.org/pods/LLALogManager)
 
-Customizable Swift Logger.
+Customizable Swift Logger 🐝ℹ️⚠️💣💥
 
 # Feature
 ### Additional Information
