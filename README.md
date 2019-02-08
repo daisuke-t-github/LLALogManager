@@ -1,11 +1,11 @@
 <img src="https://github.com/daisuke-t-jp/LLALogManager/blob/master/doc/header.png" width="700"></br>
 ------
-![Platform](https://img.shields.io/badge/Platform-iOS%2010.0+-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-iOS%2010.0+%20%7C%20macOS%2012.0+-blue.svg)
 [![Language Swift%204.2](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)](https://developer.apple.com/swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-green.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods](https://img.shields.io/cocoapods/v/LLALogManager.svg)](https://cocoapods.org/pods/LLALogManager)
 
-Customizable iOS logger.
+Customizable Swift Logger.
 
 # Feature
 ### Additional Information
@@ -33,7 +33,6 @@ LLALogManager can output additional information.
 
 ### CocoaPods
 ```
-platform :ios, '10.0'
 use_frameworks!
 
 target 'target' do
