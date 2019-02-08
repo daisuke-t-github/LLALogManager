@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  LLALogManagerDemo
+//  LLALogManagerDemoiOS
 //
-//  Created by Daisuke T on 2019/01/28.
-//  Copyright © 2019 LLALogManagerDemo. All rights reserved.
+//  Created by Daisuke T on 2019/02/08.
+//  Copyright © 2019 LLALogManagerDemoiOS. All rights reserved.
 //
 
 import UIKit

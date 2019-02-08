@@ -1,18 +1,17 @@
 //
 //  ViewController.swift
-//  Demo
+//  LLALogManagerDemoiOS
 //
-//  Created by Daisuke T on 2019/01/10.
-//  Copyright © 2019 Daisuke T. All rights reserved.
+//  Created by Daisuke T on 2019/02/08.
+//  Copyright © 2019 LLALogManagerDemoiOS. All rights reserved.
 //
 
 import UIKit
 
 import LLALogManager
 
-
-
 class ViewController: UIViewController {
+	
 	static let levelMap:[LLALogManager.Level:String] = [
 		LLALogManager.Level.debug	: "DEB",
 		LLALogManager.Level.info	: "INF",
@@ -21,14 +20,11 @@ class ViewController: UIViewController {
 		LLALogManager.Level.fatal	: "FAT",
 		]
 	
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		
-		
-		let llalog = LLALogManager.sharedInstance
 
+		let llalog = LLALogManager.sharedInstance
+		
 		
 		#if DEBUG
 		#else
@@ -37,7 +33,7 @@ class ViewController: UIViewController {
 		
 		llalog.i("Version \(llalog.version)")
 		let level: LLALogManager.Level = llalog.level
-
+		
 		
 		// Log Level.
 		print("\nLEVEL")
@@ -46,7 +42,7 @@ class ViewController: UIViewController {
 		llalog.w("Warning.")
 		llalog.e("Error(Possible continue).")
 		llalog.f("Fatal(Impossible continue).")
-
+		
 		print("\nChange log level to ERROR")
 		llalog.level = LLALogManager.Level.error
 		llalog.d("Information for developers.")	// Log will not output.
@@ -54,9 +50,9 @@ class ViewController: UIViewController {
 		llalog.w("Warning.")					// Log will not output.
 		llalog.e("Error(Possible continue).")
 		llalog.f("Fatal(Impossible continue).")
-
+		
 		llalog.level = level
-
+		
 		
 		// Change log level string.
 		print("\nLOG LEVEL STRING")
@@ -67,18 +63,18 @@ class ViewController: UIViewController {
 		llalog.e("ERROR")
 		llalog.f("FATAL")
 		llalog.levelMap = LLALogManager.defaultLevelMap
-
-
+		
+		
 		// Change separate string.
 		print("\nSEPARATOR")
 		llalog.i("Default", "separator", "is", "space.")
-
+		
 		llalog.separator = "⭐️"
 		llalog.i("Custom", "separator", "is", ".")
-
+		
 		llalog.separator = LLALogManager.defaultSeparator
-
-
+		
+		
 		// Change date format.
 		print("\nDATE FORMAT")
 		llalog.i("Default date format is \"\(llalog.dateFormat)\".")
@@ -87,21 +83,21 @@ class ViewController: UIViewController {
 		llalog.i("Custom date format is \"\(llalog.dateFormat)\".")
 		
 		llalog.dateFormat = LLALogManager.defaultDateFormat
-
-
+		
+		
 		// Change log format
 		print("\nLOG FORMAT")
 		llalog.delegate = self
 		llalog.i("Custom log format.")
 		llalog.delegate = nil
-
-
+		
+		
 		// Thread Test.
 		llalog.isThreadingEnable = true
 		for i in 0..<UInt8.max {
 			llalog.i(i)
 		}
-
+		
 		llalog.isThreadingEnable = false
 		llalog.i("😀")
 	}
@@ -120,14 +116,16 @@ extension ViewController : LLALogManagerDelegate {
 		
 		var separator = ""
 		for elm in items {
-
+			
 			print(separator, terminator: "")
 			print(elm, terminator: "")
 			
 			separator = " "
-
+			
 		}
 		
 	}
+
+
 }
 

@@ -1,9 +1,0 @@
-platform :ios, '10.0'
-use_frameworks!
-
-target 'LLALogManagerDemo' do
-pod 'LLALogManager', :path => "../"
-#pod 'LLALogManager'
-end
-
-

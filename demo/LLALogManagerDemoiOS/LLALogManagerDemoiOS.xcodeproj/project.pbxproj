@@ -7,125 +7,126 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02C392AA21FEE7E100BF2EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C392A921FEE7E100BF2EB9 /* AppDelegate.swift */; };
-		02C392AC21FEE7E100BF2EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C392AB21FEE7E100BF2EB9 /* ViewController.swift */; };
-		02C392AF21FEE7E100BF2EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C392AD21FEE7E100BF2EB9 /* Main.storyboard */; };
-		02C392B121FEE7E200BF2EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C392B021FEE7E200BF2EB9 /* Assets.xcassets */; };
-		02C392B421FEE7E200BF2EB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C392B221FEE7E200BF2EB9 /* LaunchScreen.storyboard */; };
-		A92198641CE9C71B72F91D81 /* Pods_LLALogManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1BB856B90279CBDF58039C /* Pods_LLALogManagerDemo.framework */; };
+		02A4253B220D058500FD295D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A4253A220D058500FD295D /* AppDelegate.swift */; };
+		02A4253D220D058500FD295D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A4253C220D058500FD295D /* ViewController.swift */; };
+		02A42540220D058500FD295D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A4253E220D058500FD295D /* Main.storyboard */; };
+		02A42542220D058700FD295D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A42541220D058700FD295D /* Assets.xcassets */; };
+		02A42545220D058700FD295D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A42543220D058700FD295D /* LaunchScreen.storyboard */; };
+		64DCDD49FD0B06301957F1E5 /* Pods_LLALogManagerDemoiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2025775C080FBAD54CDD5C4A /* Pods_LLALogManagerDemoiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02C392A621FEE7E100BF2EB9 /* LLALogManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLALogManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C392A921FEE7E100BF2EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02C392AB21FEE7E100BF2EB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02C392AE21FEE7E100BF2EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		02C392B021FEE7E200BF2EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		02C392B321FEE7E200BF2EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		02C392B521FEE7E200BF2EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D1BB856B90279CBDF58039C /* Pods_LLALogManagerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLALogManagerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AE1C48E9F66ECDDACB1BE6F /* Pods-LLALogManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLALogManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLALogManagerDemo/Pods-LLALogManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		A00662438C850BB2420A3BB5 /* Pods-LLALogManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLALogManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLALogManagerDemo/Pods-LLALogManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		02A42537220D058500FD295D /* LLALogManagerDemoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLALogManagerDemoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A4253A220D058500FD295D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02A4253C220D058500FD295D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02A4253F220D058500FD295D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02A42541220D058700FD295D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02A42544220D058700FD295D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02A42546220D058700FD295D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2025775C080FBAD54CDD5C4A /* Pods_LLALogManagerDemoiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLALogManagerDemoiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		359FDE3F63B6BCB68C63FE10 /* Pods-LLALogManagerDemoiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLALogManagerDemoiOS.release.xcconfig"; path = "Target Support Files/Pods-LLALogManagerDemoiOS/Pods-LLALogManagerDemoiOS.release.xcconfig"; sourceTree = "<group>"; };
+		8D250B599642FAB351B98902 /* Pods-LLALogManagerDemoiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLALogManagerDemoiOS.debug.xcconfig"; path = "Target Support Files/Pods-LLALogManagerDemoiOS/Pods-LLALogManagerDemoiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02C392A321FEE7E100BF2EB9 /* Frameworks */ = {
+		02A42534220D058500FD295D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A92198641CE9C71B72F91D81 /* Pods_LLALogManagerDemo.framework in Frameworks */,
+				64DCDD49FD0B06301957F1E5 /* Pods_LLALogManagerDemoiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02C3929D21FEE7E100BF2EB9 = {
+		02A4252E220D058500FD295D = {
 			isa = PBXGroup;
 			children = (
-				02C392A821FEE7E100BF2EB9 /* LLALogManagerDemo */,
-				02C392A721FEE7E100BF2EB9 /* Products */,
-				5C6B40BDC4D962BB928785EC /* Pods */,
-				307491A14604F8E954ECD736 /* Frameworks */,
+				02A42539220D058500FD295D /* LLALogManagerDemoiOS */,
+				02A42538220D058500FD295D /* Products */,
+				857D56BC99533803EC323E25 /* Pods */,
+				7A17DA07C1BE56309BC8326E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		02C392A721FEE7E100BF2EB9 /* Products */ = {
+		02A42538220D058500FD295D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02C392A621FEE7E100BF2EB9 /* LLALogManagerDemo.app */,
+				02A42537220D058500FD295D /* LLALogManagerDemoiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02C392A821FEE7E100BF2EB9 /* LLALogManagerDemo */ = {
+		02A42539220D058500FD295D /* LLALogManagerDemoiOS */ = {
 			isa = PBXGroup;
 			children = (
-				02C392A921FEE7E100BF2EB9 /* AppDelegate.swift */,
-				02C392AB21FEE7E100BF2EB9 /* ViewController.swift */,
-				02C392AD21FEE7E100BF2EB9 /* Main.storyboard */,
-				02C392B021FEE7E200BF2EB9 /* Assets.xcassets */,
-				02C392B221FEE7E200BF2EB9 /* LaunchScreen.storyboard */,
-				02C392B521FEE7E200BF2EB9 /* Info.plist */,
+				02A4253A220D058500FD295D /* AppDelegate.swift */,
+				02A4253C220D058500FD295D /* ViewController.swift */,
+				02A4253E220D058500FD295D /* Main.storyboard */,
+				02A42541220D058700FD295D /* Assets.xcassets */,
+				02A42543220D058700FD295D /* LaunchScreen.storyboard */,
+				02A42546220D058700FD295D /* Info.plist */,
 			);
-			path = LLALogManagerDemo;
+			path = LLALogManagerDemoiOS;
 			sourceTree = "<group>";
 		};
-		307491A14604F8E954ECD736 /* Frameworks */ = {
+		7A17DA07C1BE56309BC8326E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3D1BB856B90279CBDF58039C /* Pods_LLALogManagerDemo.framework */,
+				2025775C080FBAD54CDD5C4A /* Pods_LLALogManagerDemoiOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5C6B40BDC4D962BB928785EC /* Pods */ = {
+		857D56BC99533803EC323E25 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A00662438C850BB2420A3BB5 /* Pods-LLALogManagerDemo.debug.xcconfig */,
-				6AE1C48E9F66ECDDACB1BE6F /* Pods-LLALogManagerDemo.release.xcconfig */,
+				8D250B599642FAB351B98902 /* Pods-LLALogManagerDemoiOS.debug.xcconfig */,
+				359FDE3F63B6BCB68C63FE10 /* Pods-LLALogManagerDemoiOS.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02C392A521FEE7E100BF2EB9 /* LLALogManagerDemo */ = {
+		02A42536220D058500FD295D /* LLALogManagerDemoiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02C392B821FEE7E200BF2EB9 /* Build configuration list for PBXNativeTarget "LLALogManagerDemo" */;
+			buildConfigurationList = 02A42549220D058700FD295D /* Build configuration list for PBXNativeTarget "LLALogManagerDemoiOS" */;
 			buildPhases = (
-				62864AE3960CCF3D86808935 /* [CP] Check Pods Manifest.lock */,
-				02C392A221FEE7E100BF2EB9 /* Sources */,
-				02C392A321FEE7E100BF2EB9 /* Frameworks */,
-				02C392A421FEE7E100BF2EB9 /* Resources */,
-				116752D4E3D34984C6BA3A41 /* [CP] Embed Pods Frameworks */,
+				69A97ECCC8DF6EF21D64A4CD /* [CP] Check Pods Manifest.lock */,
+				02A42533220D058500FD295D /* Sources */,
+				02A42534220D058500FD295D /* Frameworks */,
+				02A42535220D058500FD295D /* Resources */,
+				5B3783DC6C82A1A2243E4583 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LLALogManagerDemo;
-			productName = LLALogManagerDemo;
-			productReference = 02C392A621FEE7E100BF2EB9 /* LLALogManagerDemo.app */;
+			name = LLALogManagerDemoiOS;
+			productName = LLALogManagerDemoiOS;
+			productReference = 02A42537220D058500FD295D /* LLALogManagerDemoiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		02C3929E21FEE7E100BF2EB9 /* Project object */ = {
+		02A4252F220D058500FD295D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = LLALogManagerDemo;
+				ORGANIZATIONNAME = LLALogManagerDemoiOS;
 				TargetAttributes = {
-					02C392A521FEE7E100BF2EB9 = {
+					02A42536220D058500FD295D = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 02C392A121FEE7E100BF2EB9 /* Build configuration list for PBXProject "LLALogManagerDemo" */;
+			buildConfigurationList = 02A42532220D058500FD295D /* Build configuration list for PBXProject "LLALogManagerDemoiOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -133,60 +134,68 @@
 				en,
 				Base,
 			);
-			mainGroup = 02C3929D21FEE7E100BF2EB9;
-			productRefGroup = 02C392A721FEE7E100BF2EB9 /* Products */;
+			mainGroup = 02A4252E220D058500FD295D;
+			productRefGroup = 02A42538220D058500FD295D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02C392A521FEE7E100BF2EB9 /* LLALogManagerDemo */,
+				02A42536220D058500FD295D /* LLALogManagerDemoiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		02C392A421FEE7E100BF2EB9 /* Resources */ = {
+		02A42535220D058500FD295D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C392B421FEE7E200BF2EB9 /* LaunchScreen.storyboard in Resources */,
-				02C392B121FEE7E200BF2EB9 /* Assets.xcassets in Resources */,
-				02C392AF21FEE7E100BF2EB9 /* Main.storyboard in Resources */,
+				02A42545220D058700FD295D /* LaunchScreen.storyboard in Resources */,
+				02A42542220D058700FD295D /* Assets.xcassets in Resources */,
+				02A42540220D058500FD295D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		116752D4E3D34984C6BA3A41 /* [CP] Embed Pods Frameworks */ = {
+		5B3783DC6C82A1A2243E4583 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLALogManagerDemo/Pods-LLALogManagerDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LLALogManagerDemoiOS/Pods-LLALogManagerDemoiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LLALogManager/LLALogManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLALogManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLALogManagerDemo/Pods-LLALogManagerDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLALogManagerDemoiOS/Pods-LLALogManagerDemoiOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		62864AE3960CCF3D86808935 /* [CP] Check Pods Manifest.lock */ = {
+		69A97ECCC8DF6EF21D64A4CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LLALogManagerDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LLALogManagerDemoiOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -196,30 +205,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		02C392A221FEE7E100BF2EB9 /* Sources */ = {
+		02A42533220D058500FD295D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C392AC21FEE7E100BF2EB9 /* ViewController.swift in Sources */,
-				02C392AA21FEE7E100BF2EB9 /* AppDelegate.swift in Sources */,
+				02A4253D220D058500FD295D /* ViewController.swift in Sources */,
+				02A4253B220D058500FD295D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		02C392AD21FEE7E100BF2EB9 /* Main.storyboard */ = {
+		02A4253E220D058500FD295D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02C392AE21FEE7E100BF2EB9 /* Base */,
+				02A4253F220D058500FD295D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		02C392B221FEE7E200BF2EB9 /* LaunchScreen.storyboard */ = {
+		02A42543220D058700FD295D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02C392B321FEE7E200BF2EB9 /* Base */,
+				02A42544220D058700FD295D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -227,7 +236,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		02C392B621FEE7E200BF2EB9 /* Debug */ = {
+		02A42547220D058700FD295D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -288,7 +297,7 @@
 			};
 			name = Debug;
 		};
-		02C392B721FEE7E200BF2EB9 /* Release */ = {
+		02A42548220D058700FD295D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -343,36 +352,36 @@
 			};
 			name = Release;
 		};
-		02C392B921FEE7E200BF2EB9 /* Debug */ = {
+		02A4254A220D058700FD295D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A00662438C850BB2420A3BB5 /* Pods-LLALogManagerDemo.debug.xcconfig */;
+			baseConfigurationReference = 8D250B599642FAB351B98902 /* Pods-LLALogManagerDemoiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LLALogManagerDemo/Info.plist;
+				INFOPLIST_FILE = LLALogManagerDemoiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemo.LLALogManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoiOS.LLALogManagerDemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		02C392BA21FEE7E200BF2EB9 /* Release */ = {
+		02A4254B220D058700FD295D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AE1C48E9F66ECDDACB1BE6F /* Pods-LLALogManagerDemo.release.xcconfig */;
+			baseConfigurationReference = 359FDE3F63B6BCB68C63FE10 /* Pods-LLALogManagerDemoiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LLALogManagerDemo/Info.plist;
+				INFOPLIST_FILE = LLALogManagerDemoiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemo.LLALogManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoiOS.LLALogManagerDemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,25 +391,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02C392A121FEE7E100BF2EB9 /* Build configuration list for PBXProject "LLALogManagerDemo" */ = {
+		02A42532220D058500FD295D /* Build configuration list for PBXProject "LLALogManagerDemoiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02C392B621FEE7E200BF2EB9 /* Debug */,
-				02C392B721FEE7E200BF2EB9 /* Release */,
+				02A42547220D058700FD295D /* Debug */,
+				02A42548220D058700FD295D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02C392B821FEE7E200BF2EB9 /* Build configuration list for PBXNativeTarget "LLALogManagerDemo" */ = {
+		02A42549220D058700FD295D /* Build configuration list for PBXNativeTarget "LLALogManagerDemoiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02C392B921FEE7E200BF2EB9 /* Debug */,
-				02C392BA21FEE7E200BF2EB9 /* Release */,
+				02A4254A220D058700FD295D /* Debug */,
+				02A4254B220D058700FD295D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 02C3929E21FEE7E100BF2EB9 /* Project object */;
+	rootObject = 02A4252F220D058500FD295D /* Project object */;
 }
