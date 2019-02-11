@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0116CDA26F8CD8FA16EB3E98 /* Pods_LLALogManagerDemoTvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0497FB7946FD08FFC98B1E /* Pods_LLALogManagerDemoTvOS.framework */; };
+		7E6829D42211583300B66F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6829D32211583300B66F70 /* AppDelegate.swift */; };
+		7E6829D62211583300B66F70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6829D52211583300B66F70 /* ViewController.swift */; };
+		7E6829D92211583300B66F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6829D72211583300B66F70 /* Main.storyboard */; };
+		7E6829DB2211583500B66F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6829DA2211583500B66F70 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E6829D02211583300B66F70 /* LLALogManagerDemoTvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLALogManagerDemoTvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6829D32211583300B66F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E6829D52211583300B66F70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E6829D82211583300B66F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E6829DA2211583500B66F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E6829DC2211583500B66F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E0497FB7946FD08FFC98B1E /* Pods_LLALogManagerDemoTvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLALogManagerDemoTvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5EAB4C3C2523B53F062D11F /* Pods-LLALogManagerDemoTvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLALogManagerDemoTvOS.release.xcconfig"; path = "Target Support Files/Pods-LLALogManagerDemoTvOS/Pods-LLALogManagerDemoTvOS.release.xcconfig"; sourceTree = "<group>"; };
+		FD4BDB5006F4AC452D9CC23E /* Pods-LLALogManagerDemoTvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLALogManagerDemoTvOS.debug.xcconfig"; path = "Target Support Files/Pods-LLALogManagerDemoTvOS/Pods-LLALogManagerDemoTvOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E6829CD2211583300B66F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116CDA26F8CD8FA16EB3E98 /* Pods_LLALogManagerDemoTvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AED04228E2266D69E9F5260 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD4BDB5006F4AC452D9CC23E /* Pods-LLALogManagerDemoTvOS.debug.xcconfig */,
+				F5EAB4C3C2523B53F062D11F /* Pods-LLALogManagerDemoTvOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7E6829C72211583300B66F70 = {
+			isa = PBXGroup;
+			children = (
+				7E6829D22211583300B66F70 /* LLALogManagerDemoTvOS */,
+				7E6829D12211583300B66F70 /* Products */,
+				5AED04228E2266D69E9F5260 /* Pods */,
+				FAE2B62F2901C6E3EA49B3A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E6829D12211583300B66F70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E6829D02211583300B66F70 /* LLALogManagerDemoTvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E6829D22211583300B66F70 /* LLALogManagerDemoTvOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E6829D32211583300B66F70 /* AppDelegate.swift */,
+				7E6829D52211583300B66F70 /* ViewController.swift */,
+				7E6829D72211583300B66F70 /* Main.storyboard */,
+				7E6829DA2211583500B66F70 /* Assets.xcassets */,
+				7E6829DC2211583500B66F70 /* Info.plist */,
+			);
+			path = LLALogManagerDemoTvOS;
+			sourceTree = "<group>";
+		};
+		FAE2B62F2901C6E3EA49B3A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E0497FB7946FD08FFC98B1E /* Pods_LLALogManagerDemoTvOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E6829CF2211583300B66F70 /* LLALogManagerDemoTvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E6829DF2211583500B66F70 /* Build configuration list for PBXNativeTarget "LLALogManagerDemoTvOS" */;
+			buildPhases = (
+				978C48A1BA81F1E24CFD2B70 /* [CP] Check Pods Manifest.lock */,
+				7E6829CC2211583300B66F70 /* Sources */,
+				7E6829CD2211583300B66F70 /* Frameworks */,
+				7E6829CE2211583300B66F70 /* Resources */,
+				0261E6616BCAFFBB2AC1FAC5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LLALogManagerDemoTvOS;
+			productName = LLALogManagerDemoTvOS;
+			productReference = 7E6829D02211583300B66F70 /* LLALogManagerDemoTvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E6829C82211583300B66F70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = LLALogManagerDemoTvOS;
+				TargetAttributes = {
+					7E6829CF2211583300B66F70 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 7E6829CB2211583300B66F70 /* Build configuration list for PBXProject "LLALogManagerDemoTvOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E6829C72211583300B66F70;
+			productRefGroup = 7E6829D12211583300B66F70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E6829CF2211583300B66F70 /* LLALogManagerDemoTvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E6829CE2211583300B66F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6829DB2211583500B66F70 /* Assets.xcassets in Resources */,
+				7E6829D92211583300B66F70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0261E6616BCAFFBB2AC1FAC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LLALogManagerDemoTvOS/Pods-LLALogManagerDemoTvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LLALogManager/LLALogManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLALogManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLALogManagerDemoTvOS/Pods-LLALogManagerDemoTvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		978C48A1BA81F1E24CFD2B70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LLALogManagerDemoTvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E6829CC2211583300B66F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6829D62211583300B66F70 /* ViewController.swift in Sources */,
+				7E6829D42211583300B66F70 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7E6829D72211583300B66F70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E6829D82211583300B66F70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E6829DD2211583500B66F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		7E6829DE2211583500B66F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E6829E02211583500B66F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD4BDB5006F4AC452D9CC23E /* Pods-LLALogManagerDemoTvOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LLALogManagerDemoTvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoTvOS.LLALogManagerDemoTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		7E6829E12211583500B66F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5EAB4C3C2523B53F062D11F /* Pods-LLALogManagerDemoTvOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LLALogManagerDemoTvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoTvOS.LLALogManagerDemoTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E6829CB2211583300B66F70 /* Build configuration list for PBXProject "LLALogManagerDemoTvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E6829DD2211583500B66F70 /* Debug */,
+				7E6829DE2211583500B66F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E6829DF2211583500B66F70 /* Build configuration list for PBXNativeTarget "LLALogManagerDemoTvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E6829E02211583500B66F70 /* Debug */,
+				7E6829E12211583500B66F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E6829C82211583300B66F70 /* Project object */;
+}
