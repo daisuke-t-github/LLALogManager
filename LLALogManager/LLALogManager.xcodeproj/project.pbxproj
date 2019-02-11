@@ -19,6 +19,7 @@
 		02098B0521E6FDB300BD3EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02098B0C21E6FEEC00BD3EA7 /* LLALogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLALogManager.swift; sourceTree = "<group>"; };
 		02A4252C220D00F500FD295D /* LLALogManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLALogManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E3D4111221156F000A66B74 /* LLALogManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLALogManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +31,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		02A42527220D00F500FD295D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E3D410E221156F000A66B74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +60,7 @@
 			children = (
 				02098B0121E6FDB300BD3EA7 /* LLALogManager.framework */,
 				02A4252C220D00F500FD295D /* LLALogManager.framework */,
+				7E3D4111221156F000A66B74 /* LLALogManager.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,12 +94,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E3D410C221156F000A66B74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		02098B0021E6FDB300BD3EA7 /* LLALogManage-iOS */ = {
+		02098B0021E6FDB300BD3EA7 /* LLALogManager-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02098B0921E6FDB300BD3EA7 /* Build configuration list for PBXNativeTarget "LLALogManage-iOS" */;
+			buildConfigurationList = 02098B0921E6FDB300BD3EA7 /* Build configuration list for PBXNativeTarget "LLALogManager-iOS" */;
 			buildPhases = (
 				02098AFC21E6FDB300BD3EA7 /* Headers */,
 				02098AFD21E6FDB300BD3EA7 /* Sources */,
@@ -101,14 +117,14 @@
 			);
 			dependencies = (
 			);
-			name = "LLALogManage-iOS";
+			name = "LLALogManager-iOS";
 			productName = LLALogManager;
 			productReference = 02098B0121E6FDB300BD3EA7 /* LLALogManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		02A42522220D00F500FD295D /* LLALogManage-macOS */ = {
+		02A42522220D00F500FD295D /* LLALogManager-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02A42529220D00F500FD295D /* Build configuration list for PBXNativeTarget "LLALogManage-macOS" */;
+			buildConfigurationList = 02A42529220D00F500FD295D /* Build configuration list for PBXNativeTarget "LLALogManager-macOS" */;
 			buildPhases = (
 				02A42523220D00F500FD295D /* Headers */,
 				02A42525220D00F500FD295D /* Sources */,
@@ -119,9 +135,27 @@
 			);
 			dependencies = (
 			);
-			name = "LLALogManage-macOS";
+			name = "LLALogManager-macOS";
 			productName = LLALogManager;
 			productReference = 02A4252C220D00F500FD295D /* LLALogManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E3D4110221156F000A66B74 /* LLALogManager-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E3D4116221156F000A66B74 /* Build configuration list for PBXNativeTarget "LLALogManager-tvOS" */;
+			buildPhases = (
+				7E3D410C221156F000A66B74 /* Headers */,
+				7E3D410D221156F000A66B74 /* Sources */,
+				7E3D410E221156F000A66B74 /* Frameworks */,
+				7E3D410F221156F000A66B74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LLALogManager-tvOS";
+			productName = "LLALogManager-tvOS";
+			productReference = 7E3D4111221156F000A66B74 /* LLALogManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -138,6 +172,9 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
+					7E3D4110221156F000A66B74 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 02098AFB21E6FDB300BD3EA7 /* Build configuration list for PBXProject "LLALogManager" */;
@@ -153,8 +190,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02098B0021E6FDB300BD3EA7 /* LLALogManage-iOS */,
-				02A42522220D00F500FD295D /* LLALogManage-macOS */,
+				02098B0021E6FDB300BD3EA7 /* LLALogManager-iOS */,
+				02A42522220D00F500FD295D /* LLALogManager-macOS */,
+				7E3D4110221156F000A66B74 /* LLALogManager-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +206,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		02A42528220D00F500FD295D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E3D410F221156F000A66B74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,6 +235,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02A42526220D00F500FD295D /* LLALogManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E3D410D221156F000A66B74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +484,62 @@
 			};
 			name = Release;
 		};
+		7E3D4117221156F000A66B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LLALogManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManager.LLALogManager;
+				PRODUCT_NAME = LLALogManager;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		7E3D4118221156F000A66B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LLALogManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManager.LLALogManager;
+				PRODUCT_NAME = LLALogManager;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02098B0921E6FDB300BD3EA7 /* Build configuration list for PBXNativeTarget "LLALogManage-iOS" */ = {
+		02098B0921E6FDB300BD3EA7 /* Build configuration list for PBXNativeTarget "LLALogManager-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02098B0A21E6FDB300BD3EA7 /* Debug */,
@@ -453,11 +561,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02A42529220D00F500FD295D /* Build configuration list for PBXNativeTarget "LLALogManage-macOS" */ = {
+		02A42529220D00F500FD295D /* Build configuration list for PBXNativeTarget "LLALogManager-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02A4252A220D00F500FD295D /* Debug */,
 				02A4252B220D00F500FD295D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E3D4116221156F000A66B74 /* Build configuration list for PBXNativeTarget "LLALogManager-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E3D4117221156F000A66B74 /* Debug */,
+				7E3D4118221156F000A66B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
