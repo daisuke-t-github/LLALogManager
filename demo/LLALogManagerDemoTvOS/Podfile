@@ -1,0 +1,8 @@
+platform :tvos, '12.0'
+use_frameworks!
+
+target 'LLALogManagerDemoTvOS' do
+pod 'LLALogManager', :path => "../../"
+end
+
+
