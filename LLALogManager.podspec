@@ -32,7 +32,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "LLALogManager/LLALogManager/*.{h,swift}"
+  spec.source_files  = "LLALogManager/LLALogManager/*.{swift}"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
