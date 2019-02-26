@@ -108,18 +108,12 @@ class ViewController: UIViewController {
 
 
 extension ViewController : LLALogManagerDelegate {
-	func log(date: String,
-			 index: UInt,
-			 fileName: String,
-			 function: String,
-			 line: Int,
-			 level: String,
-			 items:[Any]) -> Void {
-		print("\(level) \(index) \(fileName) \(function):\(line)\t --- ",
+	func log(_ data: LLALogManager.Data) {
+		print("\(data.level) \(data.index) \(data.fileName) \(data.function):\(data.line)\t --- ",
 			terminator: "")
 		
 		var separator = ""
-		for elm in items {
+		for elm in data.items {
 			
 			print(separator, terminator: "")
 			print(elm, terminator: "")
