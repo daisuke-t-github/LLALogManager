@@ -10,14 +10,8 @@ import Foundation
 
 
 
-public protocol LLALogManagerDelegate : class {
-	func log(date: String,
-			 index: UInt,
-			 fileName: String,
-			 function: String,
-			 line: Int,
-			 level: String,
-			 items:[Any]) -> Void
+public protocol LLALogManagerDelegate: class {
+	func log(_ data: LLALogManager.Data)
 }
 
 
@@ -30,12 +24,32 @@ public class LLALogManager {
 
 
 	// MARK: - Enum, const.
-	public enum Level : UInt {
+	public enum Level: UInt {
 		case debug = 0	// Information for developers.
 		case info = 1	// Generic information.
 		case warn = 2	// Warning.
 		case error = 3	// Error(Possible Continue).
 		case fatal = 4	// Fatal(Impossible Continue).
+	}
+	
+	public struct Data {
+		public var date: String
+		public var index: UInt
+		public var fileName: String
+		public var function: String
+		public var line: Int
+		public var level: String
+		public var items: [Any]
+		
+		init() {
+			date = ""
+			index = 0
+			fileName = ""
+			function = ""
+			line = 0
+			level = ""
+			items = []
+		}
 	}
 
 	private static let keyDelegate = "delegate"
@@ -53,19 +67,19 @@ public class LLALogManager {
 	public static let defaultLevel: Level = Level.debug
 	public static let defaultSeparator: String = " "
 	public static let defaultDateFormat: String = "yyyy-MM-dd HH:mm:ss.SSS"
-	public static let defaultLevelMap: [Level : String] = [
-		Level.debug	: "🐝",
-		Level.info	: "ℹ️",
-		Level.warn	: "⚠️",
-		Level.error	: "💣",
-		Level.fatal	: "💥",
+	public static let defaultLevelMap: [Level: String] = [
+		Level.debug: "🐝",
+		Level.info: "ℹ️",
+		Level.warn: "⚠️",
+		Level.error: "💣",
+		Level.fatal: "💥",
 		]
 
 
 	
 	// MARK: - Member
 	public weak var delegate: LLALogManagerDelegate?
-	private var dispatchQueue: DispatchQueue? = nil
+	private var dispatchQueue: DispatchQueue?
 
 	private var dateFormatter: DateFormatter = DateFormatter()
 	public var dateFormat: String = LLALogManager.defaultDateFormat {
@@ -75,7 +89,7 @@ public class LLALogManager {
 	}
 	private var index: UInt = 0
 	public var level: Level = LLALogManager.defaultLevel
-	public var levelMap: [Level : String] = LLALogManager.defaultLevelMap
+	public var levelMap: [Level: String] = LLALogManager.defaultLevelMap
 	public var separator: String = LLALogManager.defaultSeparator
 	public var isAutoNewLineEnabled = true
 	public var isThreadingEnable = false
@@ -100,7 +114,7 @@ public class LLALogManager {
 			return ""
 		}
 
-		return dict["CFBundleShortVersionString"] as! String
+		return dict["CFBundleShortVersionString"] as? String ?? ""
 	}
 	
 	private var name: String {
@@ -111,9 +125,8 @@ public class LLALogManager {
 	private func incrementIndex() -> UInt {
 		if index == UInt.max {
 			index = 0
-		}
-		else {
-			index = index + 1
+		} else {
+			index += 1
 		}
 		
 		return index
@@ -122,104 +135,80 @@ public class LLALogManager {
 
 
 	// MARK: - Function(Log)
-	public func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.debug, items: items, file: file, function: function, line: line)
 	}
-	public func debug(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func debug(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.debug, items: items, file: file, function: function, line: line)
 	}
 
-	public func i(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func i(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.info, items: items, file: file, function: function, line: line)
 	}
-	public func info(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func info(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.info, items: items, file: file, function: function, line: line)
 	}
 
-	public func w(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func w(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.warn, items: items, file: file, function: function, line: line)
 	}
-	public func warn(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func warn(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.warn, items: items, file: file, function: function, line: line)
 	}
 
-	public func e(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func e(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.error, items: items, file: file, function: function, line: line)
 	}
-	public func error(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func error(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.error, items: items, file: file, function: function, line: line)
 	}
 
-	public func f(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func f(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.fatal, items: items, file: file, function: function, line: line)
 	}
-	public func fatal(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) -> Void {
+	public func fatal(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
 		log(Level.fatal, items: items, file: file, function: function, line: line)
 	}
 
-	private func log(_ level: Level, items: [Any], file: String, function: String, line: Int) -> Void {
+	private func log(_ level: Level, items: [Any], file: String, function: String, line: Int) {
 
 		guard level.rawValue >= self.level.rawValue else {
 			return
 		}
 
-
-		let param: [String : Any?] = [
-			LLALogManager.keyDelegate : delegate,
-			LLALogManager.keyAutoNewLine : isAutoNewLineEnabled,
-			LLALogManager.keySeparator : separator,
-			LLALogManager.keyDate : dateFormatter.string(from: Date()),
-			LLALogManager.keyIndex : incrementIndex(),
-			LLALogManager.keyFileName : NSString(string: file).lastPathComponent,
-			LLALogManager.keyFunction : function,
-			LLALogManager.keyLine : line,
-			LLALogManager.keyLevel : levelMap[level]!,
-			LLALogManager.keyItems : items
-			]
-
+		var data = Data()
+		data.date = dateFormatter.string(from: Date())
+		data.index = incrementIndex()
+		data.fileName = NSString(string: file).lastPathComponent
+		data.function = function
+		data.line = line
+		data.level = levelMap[level]!
+		data.items = items
+		
 		if isThreadingEnable && level != Level.fatal {
 			guard dispatchQueue != nil else {
 				return
 			}
 
 			dispatchQueue?.async(execute: {
-				self.log(param)
+				self.log(data, delegate: self.delegate, isAutoNewLineEnabled: self.isAutoNewLineEnabled, separator: self.separator)
 			})
-		}
-		else {
-			self.log(param)
+		} else {
+			self.log(data, delegate: delegate, isAutoNewLineEnabled: isAutoNewLineEnabled, separator: separator)
 		}
 
 	}
 	
-	private func log(_ param: [String: Any?]) {
-		let delegate: LLALogManagerDelegate? = param[LLALogManager.keyDelegate] as? LLALogManagerDelegate
-		let isAutoNewLine = param[LLALogManager.keyAutoNewLine] as! Bool
-		let date = param[LLALogManager.keyDate] as! String
-		let index = param[LLALogManager.keyIndex] as! UInt
-		let fileName = param[LLALogManager.keyFileName] as! String
-		let function = param[LLALogManager.keyFunction] as! String
-		let line = param[LLALogManager.keyLine] as! Int
-		let level = param[LLALogManager.keyLevel] as! String
-		let items = param[LLALogManager.keyItems] as! [Any]
-		let separator = param[LLALogManager.keySeparator] as! String
+	private func log(_ data: Data, delegate: LLALogManagerDelegate?, isAutoNewLineEnabled: Bool, separator: String) {
 
-		
 		if delegate != nil {
-			delegate!.log(date: date,
-						  index: index,
-						  fileName: fileName,
-						  function: function,
-						  line: line,
-						  level: level,
-						  items: items)
-		}
-		else {
-			print("[\(date)][\(index)][\(fileName)][\(function):\(line)][\(level)]",
+			delegate!.log(data)
+		} else {
+			print("[\(data.date)][\(data.index)][\(data.fileName)][\(data.function):\(data.line)][\(data.level)]",
 				terminator: "")
 
 			var separator2 = ""
-			for elm in items {
+			for elm in data.items {
 
 				autoreleasepool {
 					print(separator2, terminator: "")
@@ -232,7 +221,7 @@ public class LLALogManager {
 		}
 		
 		
-		if isAutoNewLine {
+		if isAutoNewLineEnabled {
 			print("")
 		}
 	}
