@@ -1,8 +1,5 @@
 included:
     - LLALogManager
-excluded:
-    - LinuxMain.swift
-    - XCTestManifests.swift
 disabled_rules:
     - file_length
     - trailing_comma
