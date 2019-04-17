@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "LLALogManager"
-  spec.version      = "1.0.13"
+  spec.version      = "1.0.14"
   spec.summary      = "Customizable Swift Logger 🐝ℹ️⚠️💣💥"
 
   spec.description  = <<-DESC
