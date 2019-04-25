@@ -85,7 +85,6 @@
 				8D250B599642FAB351B98902 /* Pods-LLALogManagerDemoiOS.debug.xcconfig */,
 				359FDE3F63B6BCB68C63FE10 /* Pods-LLALogManagerDemoiOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -365,7 +364,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoiOS.LLALogManagerDemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,7 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoiOS.LLALogManagerDemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

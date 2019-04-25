@@ -84,7 +84,6 @@
 				7181A3231F7A1C2EC7BCFDAF /* Pods-LLALogManagerDemoMacOS.debug.xcconfig */,
 				C64EC206E39E49EB8E344F12 /* Pods-LLALogManagerDemoMacOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -356,7 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoMacOS.LLALogManagerDemoMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -375,7 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LLALogManagerDemoMacOS.LLALogManagerDemoMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
