@@ -138,5 +138,5 @@ DATE FORMAT
 [01/13(Sun)][17][ViewController.swift][viewDidLoad():88][ℹ️]Custom date format is "MM/dd(EEE)".
 
 LOG FORMAT
-ℹ️ 18 ViewController.swift viewDidLoad():96	 --- Custom log format.
+ℹ️ 18 ViewController.swift viewDidLoad():96   --- Custom log format.
 ```
