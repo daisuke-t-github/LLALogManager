@@ -22,7 +22,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
     let llalog = LLALogManager.sharedInstance
     
     
@@ -118,7 +118,7 @@ extension ViewController : LLALogManagerDelegate {
     }
     
   }
-
-
+  
+  
 }
 

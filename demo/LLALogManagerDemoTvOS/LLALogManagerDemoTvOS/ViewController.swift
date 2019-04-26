@@ -11,7 +11,7 @@ import UIKit
 import LLALogManager
 
 class ViewController: UIViewController {
-
+  
   static let levelMap:[LLALogManager.Level:String] = [
     LLALogManager.Level.debug  : "DEB",
     LLALogManager.Level.info  : "INF",
@@ -19,11 +19,11 @@ class ViewController: UIViewController {
     LLALogManager.Level.error  : "ERR",
     LLALogManager.Level.fatal  : "FAT",
   ]
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-
+    
     let llalog = LLALogManager.sharedInstance
     
     
@@ -102,8 +102,8 @@ class ViewController: UIViewController {
     llalog.isThreadingEnable = false
     llalog.i("😀")
   }
-
-
+  
+  
 }
 
 

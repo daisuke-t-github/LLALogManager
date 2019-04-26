@@ -11,7 +11,7 @@ import Cocoa
 import LLALogManager
 
 class ViewController: NSViewController {
-
+  
   static let levelMap:[LLALogManager.Level:String] = [
     LLALogManager.Level.debug  : "DEB",
     LLALogManager.Level.info  : "INF",
@@ -19,10 +19,10 @@ class ViewController: NSViewController {
     LLALogManager.Level.error  : "ERR",
     LLALogManager.Level.fatal  : "FAT",
   ]
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
     let llalog = LLALogManager.sharedInstance
     
     
@@ -102,14 +102,14 @@ class ViewController: NSViewController {
     llalog.i("😀")
     
   }
-
+  
   override var representedObject: Any? {
     didSet {
-    // Update the view, if already loaded.
+      // Update the view, if already loaded.
     }
   }
-
-
+  
+  
 }
 
 
@@ -128,5 +128,5 @@ extension ViewController : LLALogManagerDelegate {
       
     }
   }
-
+  
 }

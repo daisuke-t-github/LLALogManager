@@ -17,12 +17,12 @@ public protocol LLALogManagerDelegate: class {
 
 
 public class LLALogManager {
-
+  
   // MARK: - Singleton
   public static let sharedInstance = LLALogManager()
-
-
-
+  
+  
+  
   // MARK: - Enum, const.
   public enum Level: UInt {
     case debug = 0  // Information for developers.
@@ -51,7 +51,7 @@ public class LLALogManager {
       items = []
     }
   }
-
+  
   private static let keyDelegate = "delegate"
   private static let keyAutoNewLine = "autonewline"
   private static let keySeparator = "separator"
@@ -74,12 +74,12 @@ public class LLALogManager {
     Level.error: "💣",
     Level.fatal: "💥",
   ]
-
+  
   
   // MARK: - Member
   public weak var delegate: LLALogManagerDelegate?
   private var dispatchQueue: DispatchQueue?
-
+  
   private var dateFormatter: DateFormatter = DateFormatter()
   public var dateFormat: String = LLALogManager.defaultDateFormat {
     didSet {
@@ -94,7 +94,7 @@ public class LLALogManager {
   public var isAutoNewLineEnabled = true
   public var isThreadingEnable = false
   
-
+  
   
   // MARK: - Life-cycle
   private init() {
@@ -103,9 +103,9 @@ public class LLALogManager {
     let queueLabel = name + NSUUID().uuidString
     dispatchQueue = DispatchQueue(label: queueLabel)
   }
-
-
-
+  
+  
+  
   // MARK: - Function(Util)
   public var version: String {
     let bundle = Bundle(for: type(of: self))
@@ -113,7 +113,7 @@ public class LLALogManager {
       print("error bundle get.")
       return ""
     }
-
+    
     return dict["CFBundleShortVersionString"] as? String ?? ""
   }
   
@@ -132,8 +132,8 @@ public class LLALogManager {
     return index
   }
   
-
-
+  
+  
   // MARK: - Function(Log)
   public func d(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.debug, items: items, file: file, function: function, line: line)
@@ -141,41 +141,41 @@ public class LLALogManager {
   public func debug(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.debug, items: items, file: file, function: function, line: line)
   }
-
+  
   public func i(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.info, items: items, file: file, function: function, line: line)
   }
   public func info(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.info, items: items, file: file, function: function, line: line)
   }
-
+  
   public func w(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.warn, items: items, file: file, function: function, line: line)
   }
   public func warn(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.warn, items: items, file: file, function: function, line: line)
   }
-
+  
   public func e(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.error, items: items, file: file, function: function, line: line)
   }
   public func error(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.error, items: items, file: file, function: function, line: line)
   }
-
+  
   public func f(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.fatal, items: items, file: file, function: function, line: line)
   }
   public func fatal(_ items: Any..., file: String = #file, function: String = #function, line: Int = #line) {
     log(Level.fatal, items: items, file: file, function: function, line: line)
   }
-
+  
   private func log(_ level: Level, items: [Any], file: String, function: String, line: Int) {
-
+    
     guard level.rawValue >= self.level.rawValue else {
       return
     }
-
+    
     var data = Data()
     data.date = dateFormatter.string(from: Date())
     data.index = incrementIndex()
@@ -189,34 +189,34 @@ public class LLALogManager {
       guard dispatchQueue != nil else {
         return
       }
-
+      
       dispatchQueue?.async(execute: {
         self.log(data, delegate: self.delegate, isAutoNewLineEnabled: self.isAutoNewLineEnabled, separator: self.separator)
       })
     } else {
       self.log(data, delegate: delegate, isAutoNewLineEnabled: isAutoNewLineEnabled, separator: separator)
     }
-
+    
   }
   
   private func log(_ data: Data, delegate: LLALogManagerDelegate?, isAutoNewLineEnabled: Bool, separator: String) {
-
+    
     if delegate != nil {
       delegate!.log(data)
     } else {
       print("[\(data.date)][\(data.index)][\(data.fileName)][\(data.function):\(data.line)][\(data.level)]",
         terminator: "")
-
+      
       var separator2 = ""
       for elm in data.items {
-
+        
         autoreleasepool {
           print(separator2, terminator: "")
           print(elm, terminator: "")
-
+          
           separator2 = separator
         }
-
+        
       }
     }
     
@@ -225,5 +225,5 @@ public class LLALogManager {
       print("")
     }
   }
-
+  
 }
